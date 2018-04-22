@@ -1,5 +1,111 @@
+@import './variables';
+
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
 #map {
-    height: 500px;
+	height: 500px;
+}
+
+.bk-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.bk-heading-container {
+	width: 100%;
+	height: 75px;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	background-color: $header-background-color;
+
+	.bk-heading {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 100%;
+
+		.bk-heading-item {
+		}
+	}
+
+	& + .bk-section {
+		position: relative;
+		top: 75px;
+	}
+}
+
+.bk-button-icon {
+	font-size: 20px;
+	width: $button-icon-size;
+	height: $button-icon-size;
+
+	.bk-icon {
+
+	}               
+}
+
+.bk-button {
+	background: none;
+	border: none;
+
+	&:hover, &:focus, &:active {
+		border-radius: $button-border-radius;
+		background-color: $hover-color;
+	}
+}
+
+.bk-nav-container {
+	bottom: 0px;
+	position: relative;
+	padding-top: 30px;
+	padding-left: 30px;
+
+	.bk-nav-control {
+		position: relative;
+		width: 35px;
+
+		& + .bk-nav {
+			top: 70px;
+			left: 30px;
+			position: absolute;
+		
+			.bk-nav-list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				background-color: $nav-list-background-color;
+				padding: 0px;
+				width: 200px;
+				box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+				margin: 0;
+			
+				.bk-nav-list-item {
+					padding: 10px;
+					border-bottom: 1px solid $border-color;
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+					&:hover {
+						background-color: $hover-color;
+					}
+
+					a {
+						text-decoration: none;
+						color: black;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.bk-search-container {
+	.bk-search {
+
+	}
 }

@@ -3,7 +3,6 @@ const sourcemaps = require('gulp-sourcemaps');  // Enable sourcemaps
 const uglify = require('gulp-uglify');  // Minify JS
 const sass = require('gulp-sass');  // Compile Sass
 const minifyCSS = require('gulp-csso'); // Minify CSS
-const concat = require('gulp-concat');
 
 const browserify = require('browserify');
 const babel = require('babelify');
