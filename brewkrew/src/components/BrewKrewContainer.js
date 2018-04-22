@@ -9,6 +9,13 @@ class BrewKrewContainer extends React.Component {
 		super(props);
 
 		this.data = data;
+		this.state = { navOpen: false };
+
+		this.toggleNav = this.toggleNav.bind(this);
+	}
+
+	toggleNav() {
+		this.setState({navOpen: !this.state.navOpen});
 	}
 
 	componentDidMount() {
@@ -64,6 +71,10 @@ class BrewKrewContainer extends React.Component {
 	}
 
 	render() {
+		let bkNavClass = 'bk-nav';
+		if (!this.state.navOpen)
+			bkNavClass += ' bk-nav-hidden'
+
 		return (
 			<ErrorBoundary>
 				<div className='bk-container'>
@@ -71,11 +82,11 @@ class BrewKrewContainer extends React.Component {
 						<div className='bk-heading'>
 							<div className='bk-heading-item bk-nav-container'>
 								<div className='bk-nav-control'>
-									<button className='bk-button bk-button-icon'>
+									<button onClick={this.toggleNav} className='bk-button bk-button-icon'>
 										<i className="bk-icon fas fa-bars"></i>
 									</button>
 								</div>
-								<nav className='bk-nav'>
+								<nav className={bkNavClass}>
 									<ul className='bk-nav-list'>
 										<li className='bk-nav-list-item'>
 											<a href='#'>The Conquered</a>

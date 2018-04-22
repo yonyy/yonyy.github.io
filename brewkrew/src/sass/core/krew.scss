@@ -49,6 +49,8 @@
 .bk-button {
 	background: none;
 	border: none;
+	padding: 0;
+	margin: 0;
 
 	&:hover, &:focus, &:active {
 		border-radius: $button-border-radius;
@@ -64,13 +66,16 @@
 
 	.bk-nav-control {
 		position: relative;
-		width: 35px;
 
 		& + .bk-nav {
 			top: 70px;
 			left: 30px;
 			position: absolute;
-		
+
+			&.bk-nav-hidden {
+				display: none;
+			}
+
 			.bk-nav-list {
 				list-style: none;
 				display: flex;
