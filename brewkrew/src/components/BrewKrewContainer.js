@@ -1,6 +1,10 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const ErrorBoundary = require('./ErrorBoundary')
+const HeaderContainer = require('./HeaderContainer');
+const Menu = require('./Menu');
+const Search = require('./Search');
+
 const styledMap = require('../stylemap/stylemap');
 const data = require('../db');
 
@@ -9,13 +13,6 @@ class BrewKrewContainer extends React.Component {
 		super(props);
 
 		this.data = data;
-		this.state = { navOpen: false };
-
-		this.toggleNav = this.toggleNav.bind(this);
-	}
-
-	toggleNav() {
-		this.setState({navOpen: !this.state.navOpen});
 	}
 
 	componentDidMount() {
@@ -71,45 +68,20 @@ class BrewKrewContainer extends React.Component {
 	}
 
 	render() {
-		let bkNavClass = 'bk-nav';
-		if (!this.state.navOpen)
-			bkNavClass += ' bk-nav-hidden'
-
 		return (
 			<ErrorBoundary>
 				<div className='bk-container'>
-					<div className='bk-heading-container'>
-						<div className='bk-heading'>
-							<div className='bk-heading-item bk-nav-container'>
-								<div className='bk-nav-control'>
-									<button onClick={this.toggleNav} className='bk-button bk-button-icon'>
-										<i className="bk-icon fas fa-bars"></i>
-									</button>
-								</div>
-								<nav className={bkNavClass}>
-									<ul className='bk-nav-list'>
-										<li className='bk-nav-list-item'>
-											<a href='#'>The Conquered</a>
-										</li>
-										<li className='bk-nav-list-item'>
-											<a href='#'>The Conquerors</a>
-										</li>
-									</ul>
-								</nav>
-							</div>
-							<div className='bk-heading-item'>
-								<header><h1>Brew Krew</h1></header>
-							</div>
-							<div className='bk-heading-item bk-search-container'>
-								<button className='bk-button bk-button-icon'>
-									<i className="fas fa-search"></i>
-								</button>
-								<div className='bk-search'>
-									<input type='text'/>
-								</div>
-							</div>
+					<HeaderContainer>
+						<div className='bk-heading-item'>
+							<Menu/>
 						</div>
-					</div>
+						<div className='bk-heading-item'>
+							<header className='bk-header'><h1>Brew Krew</h1></header>
+						</div>
+						<div className='bk-heading-item'>
+							<Search/>
+						</div>
+					</HeaderContainer>
 					<div className='bk-section'>
 						<div className='bk-map' id='map' ref={node => this.mapRef = node}></div>
 					</div>

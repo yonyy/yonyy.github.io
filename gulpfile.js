@@ -3,6 +3,9 @@ const sourcemaps = require('gulp-sourcemaps');  // Enable sourcemaps
 const uglify = require('gulp-uglify');  // Minify JS
 const sass = require('gulp-sass');  // Compile Sass
 const minifyCSS = require('gulp-csso'); // Minify CSS
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 
 const browserify = require('browserify');
 const babel = require('babelify');
@@ -23,22 +26,37 @@ gulp.task('build', function(watch) {
 	console.log(`===== Bundling js: ${new Date().toString()} =====`);
 
 	return bundler.bundle()
+		.pipe(plumber({
+			errorHandler: function(err) {
+				notify.onError({
+					title: "Gulp error in " + err.plugin,
+					message: err.toString()
+				})(err);
+			}
+		}))
 		.pipe(source('build.js'))
 		.pipe(buffer())
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(uglify())
-		.on('error', console.error)
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./brewkrew/dest'))
-		.on('error', console.error);
 });
 
 gulp.task('sass', function() {
 	console.log(`===== Bundling scss: ${new Date().toString()} =====`);
 
 	return gulp.src(SASS_MAIN_FILE)
+		.pipe(plumber({
+			errorHandler: function(err) {
+				notify.onError({
+					title: "Gulp error in " + err.plugin,
+					message: err.toString()
+				})(err);
+			}
+		}))
 		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass())
+		.pipe(autoprefixer({ cascade: false }))
 		.pipe(minifyCSS())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./brewkrew/dest'));

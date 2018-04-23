@@ -23,10 +23,28 @@
 	.bk-heading {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
 		height: 100%;
 
 		.bk-heading-item {
+			flex-grow: 1;
+			flex-basis: 0;
+
+			&:first-child {
+				margin: 30px 0px 0px 30px;
+			}
+
+			&:last-child {
+				margin: 30px 30px 0px 0px;
+			}
+
+			.bk-header {
+				text-align: center;
+
+				h1 {
+					text-transform: uppercase;
+					letter-spacing: 0.5em;
+				}
+			}
 		}
 	}
 
@@ -41,8 +59,10 @@
 	width: $button-icon-size;
 	height: $button-icon-size;
 
-	.bk-icon {
-
+	&:focus, &:active {
+		.bk-icon {
+			color: $focus-color;
+		}
 	}               
 }
 
@@ -54,22 +74,18 @@
 
 	&:hover, &:focus, &:active {
 		border-radius: $button-border-radius;
-		background-color: $hover-color;
+		background-color: $base-hover-color;
 	}
 }
 
 .bk-nav-container {
 	bottom: 0px;
 	position: relative;
-	padding-top: 30px;
-	padding-left: 30px;
 
 	.bk-nav-control {
 		position: relative;
 
 		& + .bk-nav {
-			top: 70px;
-			left: 30px;
 			position: absolute;
 
 			&.bk-nav-hidden {
@@ -82,7 +98,7 @@
 				flex-direction: column;
 				background-color: $nav-list-background-color;
 				padding: 0px;
-				width: 200px;
+				width: 250px;
 				box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 				margin: 0;
 			
@@ -95,13 +111,20 @@
 					}
 
 					&:hover {
-						background-color: $hover-color;
+						background-color: $base-hover-color;
 					}
 
 					a {
 						text-decoration: none;
-						color: black;
-						font-size: 14px;
+						color: $base-color;
+						font-size: 15px;
+						text-decoration: none;
+						text-transform: uppercase;
+						letter-spacing: 0.25em;
+
+						&:focus {
+							color: $focus-color;
+						}
 					}
 				}
 			}
@@ -110,7 +133,28 @@
 }
 
 .bk-search-container {
-	.bk-search {
+	display: flex;
+	justify-content: flex-end;
 
+	input {
+		border: none;
+		padding: 0px;
+		margin: 10px 0px 10px 5px;
+		font-size: 1em;
+		width: $search-field-width;
+		border-bottom: 1px solid $base-color;
+
+		&.bk-search-expand-animation {
+			width: 0px;
+			transition: width 0.5s ease-in-out
+		}
+
+		&.bk-search-expanded {
+			width: $search-field-width;
+		}
+
+		&:focus, &:active {
+			border-bottom-color: $focus-color;
+		}
 	}
 }

@@ -1,7 +1,17 @@
+@import './variables';
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-y: scroll;
+}
+
+button, a, input {
+    outline: none;
+}
+
+a:focus, a:active {
+    color: $focus-color;
 }
