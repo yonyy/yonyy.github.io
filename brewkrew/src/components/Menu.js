@@ -45,6 +45,9 @@ class Menu extends React.PureComponent {
 						<li onMouseUp={onMouseUp} className='bk-nav-list-item'>
 							<a onClick={onMouseUp} href='#'>The Conquerors</a>
 						</li>
+						<li onMouseUp={onMouseUp} className='bk-nav-list-item'>
+							<a onClick={onMouseUp} href='https://github.com/yonyy/yonyy.github.io'>Curious?</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
