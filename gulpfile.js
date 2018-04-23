@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');  // Enable sourcemaps
 const uglify = require('gulp-uglify');  // Minify JS
 const sass = require('gulp-sass');  // Compile Sass
-const minifyCSS = require('gulp-csso'); // Minify CSS
+const minify = require('gulp-csso'); // Minify CSS
 const autoprefixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -56,8 +56,8 @@ gulp.task('sass', function() {
 		}))
 		.pipe(sourcemaps.init())
 		.pipe(sass())
-		.pipe(autoprefixer({ cascade: false }))
-		.pipe(minifyCSS())
+		.pipe(autoprefixer('last 2 versions'))
+		.pipe(minify())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./brewkrew/dest'));
 });
