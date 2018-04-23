@@ -1,7 +1,5 @@
 @import './variables';
 
-/* Always set the map height explicitly to define the size of the div
-* element that contains the map. */
 #map {
 	height: 500px;
 }
@@ -103,8 +101,8 @@
 				margin: 0;
 			
 				.bk-nav-list-item {
-					padding: 10px;
-					border-bottom: 1px solid $border-color;
+					height: 35px;
+					display: flex;
 
 					&:last-child {
 						border-bottom: none;
@@ -121,9 +119,12 @@
 						text-decoration: none;
 						text-transform: uppercase;
 						letter-spacing: 0.25em;
+						padding: 10px;
+						width: 100%;
 
-						&:focus {
+						&:focus, &:active {
 							color: $focus-color;
+							background-color: $base-hover-color;
 						}
 					}
 				}
