@@ -28,7 +28,6 @@ class Search extends React.Component {
 				<input onChange={this._onChange} value={this.props.value}
 					className={bkSearchClass} type='text'
 					placeholder=':visited' />
-				<SearchResultsDropdown/>
 			</div>
 		);
 	}
