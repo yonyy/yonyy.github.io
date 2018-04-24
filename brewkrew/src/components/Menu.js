@@ -11,7 +11,10 @@ class Menu extends React.PureComponent {
 	}
 
 	componentDidUpdate() {
-		document.body.addEventListener('mouseup', this.collapseNav);
+		if (this.state.navOpen)
+			document.body.addEventListener('mouseup', this.collapseNav);
+		else
+			document.body.removeEventListener('mouseup', this.collapseNav);
 	}
 
 	toggleNav() {

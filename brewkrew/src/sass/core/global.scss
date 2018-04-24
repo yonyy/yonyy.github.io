@@ -14,3 +14,28 @@ button, a, input {
 a:focus, a:active {
     color: $focus-color;
 }
+
+h1, input, a, p {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: 0.5em;
+}
+
+a, p, input {
+    font-size: 0.75em;
+}
+
+a, p {
+    letter-spacing: 0.25em;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

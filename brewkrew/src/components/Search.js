@@ -1,4 +1,5 @@
 const React = require('react');
+const SearchResultsDropdown = require('./SearchResultsDropdown');
 
 class Search extends React.Component {
 	constructor(props) {
@@ -27,6 +28,7 @@ class Search extends React.Component {
 				<input onChange={this._onChange} value={this.props.value}
 					className={bkSearchClass} type='text'
 					placeholder=':visited' />
+				<SearchResultsDropdown/>
 			</div>
 		);
 	}
