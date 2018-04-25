@@ -33,7 +33,7 @@ class BrewKrewContainer extends React.Component {
 						</div>
 					</HeaderContainer>
 					<div className='bk-section'>
-						<AnchorButton target='section2'>
+						<AnchorButton targetUp='map' targetDown='section2'>
 							<Map google={this.props.google} searchTerm={this.state.searchTerm}/>
 						</AnchorButton>
 					</div>

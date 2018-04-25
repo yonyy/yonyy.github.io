@@ -219,6 +219,14 @@
 	height: 500px;
 }
 
+.bk-transform-reverse {
+	transition: transform 0.5s ease-in-out;
+}
+
+.bk-reverse {
+	transform: rotate(180deg);
+}
+
 //@media all and (max-width: 1280px) {}
 //@media all and (max-width: 980px) { ... }
 

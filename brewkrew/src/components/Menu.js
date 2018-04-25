@@ -54,7 +54,7 @@ class Menu extends React.PureComponent {
 		return (
 			<div className='bk-nav-container'>
 				<button ref={(node) => { this.navButtonRef = node }} onClick={controlOnClick} className='bk-button bk-button-icon bk-nav-control'>
-					<i className="bk-icon fas fa-bars bk-icon"></i>
+					<i className='bk-icon fas fa-bars bk-icon'></i>
 				</button>
 				<nav className={bkNavClass}>
 					<ul className='bk-nav-list' >
@@ -65,7 +65,7 @@ class Menu extends React.PureComponent {
 							<a className='bk-link' href='#'>The Conquerors</a>
 						</li>
 						<li className='bk-nav-list-item'>
-							<a className='bk-link' href='https://github.com/yonyy/yonyy.github.io'>Curious? <i className="bk-icon fas fa-code"></i></a>
+							<a className='bk-link' href='https://github.com/yonyy/yonyy.github.io'>Curious? <i className='bk-icon fas fa-code'></i></a>
 						</li>
 					</ul>
 				</nav>
