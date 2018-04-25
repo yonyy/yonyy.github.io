@@ -1,31 +1,35 @@
 {
-  "name": "yonyy.github.io",
-  "version": "1.0.0",
-  "description": "Enjoy",
-  "main": "index.js",
-  "repository": "https://github.com/yonyy/yonyy.github.io",
-  "author": "Yonatan Perez",
-  "license": "MIT",
-  "dependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babelify": "^8.0.0",
-    "browserify": "^16.2.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-csso": "^3.0.1",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
-  }
+	"name": "yonyy.github.io",
+	"version": "1.0.0",
+	"description": "Enjoy",
+	"main": "index.js",
+	"repository": "https://github.com/yonyy/yonyy.github.io",
+	"author": "Yonatan Perez",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.16.3",
+		"prop-types": "^15.6.1",
+		"react": "^16.3.2",
+		"react-dom": "^16.3.2"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-react": "^6.24.1",
+		"babelify": "^8.0.0",
+		"browserify": "^16.2.0",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^5.0.0",
+		"gulp-csso": "^3.0.1",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-sass": "^4.0.1",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-uglify": "^3.0.0",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"scripts": {
+		"start": "gulp && node index.js"
+	}
 }

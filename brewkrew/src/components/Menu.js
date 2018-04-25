@@ -1,29 +1,45 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
+const ESC = 'Escape';
+
 class Menu extends React.PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = { navOpen: false };
 		this.toggleNav = this.toggleNav.bind(this);
-		this.collapseNav = this.collapseNav.bind(this);
 		this.resetFocus = this.resetFocus.bind(this);
+		this.captureEsc = this.captureEsc.bind(this);
 	}
 
 	componentDidUpdate() {
 		if (this.state.navOpen)
-			document.body.addEventListener('mouseup', this.collapseNav);
+			this.addListeners();
 		else
-			document.body.removeEventListener('mouseup', this.collapseNav);
+			this.removeListeners();
 	}
 
-	toggleNav() {
-		this.setState({navOpen: !this.state.navOpen});
+	addListeners() {
+		document.body.addEventListener('click', this.toggleNav, false);
+		document.body.addEventListener('keyup', this.captureEsc, false);
 	}
 
-	collapseNav(evt) {
-		this.setState({navOpen: false});
+	removeListeners() {
+		document.body.removeEventListener('click', this.toggleNav);
+		document.body.removeEventListener('keyup', this.captureEsc);
+	}
+
+	captureEsc(evt) {
+		if (evt.key !== ESC)
+			return;
+
+		this.toggleNav(evt);
 		this.resetFocus();
+	}
+
+	toggleNav(evt) {
+		this.setState({navOpen: !this.state.navOpen});
+		evt.stopPropagation();
 	}
 
 	resetFocus() {
@@ -33,23 +49,23 @@ class Menu extends React.PureComponent {
 
 	render() {
 		let bkNavClass = 'bk-nav' + ((this.state.navOpen) ? '' : ' bk-nav-hidden');
-		let onMouseUp = (this.state.navOpen) ? this.collapseNav : null;
+		let controlOnClick = (this.state.navOpen) ? null : this.toggleNav;
 
 		return (
 			<div className='bk-nav-container'>
-				<button ref={(node) => { this.navButtonRef = node }} onClick={this.toggleNav} className='bk-button bk-button-icon bk-nav-control'>
+				<button ref={(node) => { this.navButtonRef = node }} onClick={controlOnClick} className='bk-button bk-button-icon bk-nav-control'>
 					<i className="bk-icon fas fa-bars bk-icon"></i>
 				</button>
 				<nav className={bkNavClass}>
 					<ul className='bk-nav-list' >
-						<li onMouseUp={onMouseUp} className='bk-nav-list-item'>
-							<a onClick={onMouseUp} href='#'>The Conquered</a>
+						<li className='bk-nav-list-item'>
+							<a className='bk-link' href='#'>The Conquered</a>
 						</li>
-						<li onMouseUp={onMouseUp} className='bk-nav-list-item'>
-							<a onClick={onMouseUp} href='#'>The Conquerors</a>
+						<li className='bk-nav-list-item'>
+							<a className='bk-link' href='#'>The Conquerors</a>
 						</li>
-						<li onMouseUp={onMouseUp} className='bk-nav-list-item'>
-							<a onClick={onMouseUp} href='https://github.com/yonyy/yonyy.github.io'>Curious?</a>
+						<li className='bk-nav-list-item'>
+							<a className='bk-link' href='https://github.com/yonyy/yonyy.github.io'>Curious? <i className="bk-icon fas fa-code"></i></a>
 						</li>
 					</ul>
 				</nav>

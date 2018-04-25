@@ -11,31 +11,23 @@ button, a, input {
     outline: none;
 }
 
-a:focus, a:active {
-    color: $focus-color;
-}
-
 h1, input, a, p {
     text-transform: uppercase;
 }
 
+ul {
+    list-style: none;
+}
+
 h1 {
-    font-size: 2em;
-    letter-spacing: 0.5em;
+    font-size: $h1-font-size;
+    letter-spacing: $h1-letter-spacing;
 }
 
 a, p, input {
-    font-size: 0.75em;
+    font-size: $basic-text-font-size;
 }
 
 a, p {
-    letter-spacing: 0.25em;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
+    letter-spacing: $text-letter-spacing;
 }

@@ -101,12 +101,7 @@ class Map extends React.PureComponent {
 
 	executeCommand(rawCommand) {
 		const command = rawCommand.substring(1);
-		switch (command) {
-			case 'visited':
-				return this.filterVisited(true);
-			case 'notvisited':
-				return this.filterVisited(false);
-		}
+		this.filterVisited((command === 'visited'));
 	}
 
 	render() {

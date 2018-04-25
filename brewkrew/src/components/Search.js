@@ -19,13 +19,15 @@ class Search extends React.Component {
 
 	render() {
 		let bkSearchClass = 'bk-search-expand-animation' + ((this.state.searchOpen) ? ' bk-search-expanded' : '');
+		let tabIndex = (this.state.searchOpen) ? 0 : -1;
+
 		return (
 			<div className='bk-search-container'>
 				<button className='bk-button bk-button-icon'
 				onClick={this.toggleSearchField}>
 					<i className="fas fa-search bk-icon"></i>
 				</button>
-				<input onChange={this._onChange} value={this.props.value}
+				<input tabIndex={tabIndex} onChange={this._onChange} value={this.props.value}
 					className={bkSearchClass} type='text'
 					placeholder=':visited' />
 			</div>

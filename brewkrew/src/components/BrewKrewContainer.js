@@ -4,6 +4,7 @@ const HeaderContainer = require('./HeaderContainer');
 const Menu = require('./Menu');
 const Search = require('./Search');
 const Map = require('./Map');
+const AnchorButton = require('./AnchorButton');
 
 class BrewKrewContainer extends React.Component {
 	constructor(props) {
@@ -32,9 +33,11 @@ class BrewKrewContainer extends React.Component {
 						</div>
 					</HeaderContainer>
 					<div className='bk-section'>
-						<Map google={this.props.google} searchTerm={this.state.searchTerm}/>
+						<AnchorButton target='section2'>
+							<Map google={this.props.google} searchTerm={this.state.searchTerm}/>
+						</AnchorButton>
 					</div>
-					<div className='bk-section'></div>
+					<div className='bk-section' id='section2'></div>
 				</div>
 			</ErrorBoundary>
 		);

@@ -58,7 +58,7 @@ gulp.task('sass', function() {
 		.pipe(sass())
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(minify())
-		.pipe(sourcemaps.write('.'))
+		.pipe(sourcemaps.write({includeContent: false, sourceRoot: './brewkrew/src'}))
 		.pipe(gulp.dest('./brewkrew/dest'));
 });
 
