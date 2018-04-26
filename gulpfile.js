@@ -17,7 +17,8 @@ const SASS_FILES = 'brewkrew/src/**/*.scss';
 const JS_FILES = 'brewkrew/src/**/*.js';
 const JS_FILE = 'brewkrew/src/index.js'
 
-gulp.task('build', function(watch) {
+gulp.task('build-dev', function(watch) {
+	process.env = 'development';
 	const bundler = browserify({ entries: [JS_FILE], debug: true })
 	.transform(babel.configure({
 		presets: ["env", "react"]
@@ -25,6 +26,31 @@ gulp.task('build', function(watch) {
 
 	console.log(`===== Bundling js: ${new Date().toString()} =====`);
 
+	return bundler.bundle()
+		.pipe(plumber({
+			errorHandler: function(err) {
+				notify.onError({
+					title: "Gulp error in " + err.plugin,
+					message: err.toString()
+				})(err);
+			}
+		}))
+		.pipe(source('build.js'))
+		.pipe(buffer())
+		.pipe(sourcemaps.init({loadMaps: true}))
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest('./brewkrew/dest'))
+});
+
+
+gulp.task('build-prod', function(watch) {
+	process.env = 'production';
+	const bundler = browserify({ entries: [JS_FILE], debug: true })
+	.transform(babel.configure({
+		presets: ["env", "react"]
+	}));
+
+	console.log(`===== Bundling js: ${new Date().toString()} =====`);
 	return bundler.bundle()
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -54,17 +80,18 @@ gulp.task('sass', function() {
 				})(err);
 			}
 		}))
-		.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sass())
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(minify())
-		.pipe(sourcemaps.write({includeContent: false, sourceRoot: './brewkrew/src'}))
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./brewkrew/dest'));
 });
 
-gulp.task('watch', ['build', 'sass'], function() {
-	gulp.watch(JS_FILES, ['build']);
+gulp.task('watch', ['build-dev', 'sass'], function() {
+	gulp.watch(JS_FILES, ['build-dev']);
 	return gulp.watch(SASS_FILES, ['sass']);
 });
 
-gulp.task('default', ['build', 'sass']);
+gulp.task('dev', ['build-dev', 'sass']);
+gulp.task('default', ['build-prod', 'sass']);

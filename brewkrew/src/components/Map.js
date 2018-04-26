@@ -1,7 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-const data = require('../db');
 const styledMap = require('../stylemap/stylemap');
 
 const FONT_FAMILY = 'Lato, sans-serif';
@@ -9,28 +8,11 @@ const FONT_WEIGHT = 'bold';
 const STYLE_NAME = 'Brew Style';
 const CENTER_LAT_LONG = {lat: 32.8806222, lng: -117.1652732};
 
-class Map extends React.PureComponent {
+class Map extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { searchTerm: (this.props.searchTerm || '') };
-		this.data = data;
 
-		this.filterMarkers = this.filterMarkers.bind(this);
-		this.executeCommand = this.executeCommand.bind(this);
-		this.filterVisited = this.filterVisited.bind(this);
-	}
-
-	static getDerivedStateFromProps(nextProps, prevState) {
-		if (nextProps.searchTerm !== prevState.searchTerm)
-			return Object.assign({}, prevState, { searchTerm: nextProps.searchTerm });
-		return null;
-	}
-
-	componentDidUpdate() {
-		if (this.state.searchTerm.startsWith(':'))
-			this.executeCommand(this.state.searchTerm);
-		else
-			this.filterMarkers(this.state.searchTerm);
+		this.filterOutData = this.filterOutData.bind(this);
 	}
 
 	componentDidMount() {
@@ -50,7 +32,7 @@ class Map extends React.PureComponent {
 			}
 		});
 
-		this.markers = this.data.map((brewery, index) => {
+		this.markers = this.props.data.map((brewery, index) => {
 			let marker = new Marker({
 				position: brewery.coordinates,
 				map: this.map
@@ -79,29 +61,19 @@ class Map extends React.PureComponent {
 		this.map.setMapTypeId('styled_map');
 	}
 
-	filterMarkers(label) {
-		this.data.map((brewery, index) => {
-			const marker = this.markers[index];
-			if (brewery.label.toLowerCase().indexOf(label.toLowerCase()) === -1)
-				marker.setMap(null);
-			else if (marker.getMap() === null)
-				marker.setMap(this.map);
-		});
+	componentDidUpdate() {
+		this.filterOutData();
 	}
 
-	filterVisited(visited) {
-		this.data.map((brewery, index) => {
-			const marker = this.markers[index];
-			if (brewery.visited !== visited)
-				marker.setMap(null);
-			else if (marker.getMap() === null)
-				marker.setMap(this.map);
+	filterOutData() {
+		const points = this.props.points;
+		const indices = points.map(p => p.index);
+		this.markers.map((m, index) => {
+			if (indices.indexOf(index) === -1)
+				m.setMap(null);
+			else if (m.getMap() === null)
+				m.setMap(this.map);
 		});
-	}
-
-	executeCommand(rawCommand) {
-		const command = rawCommand.substring(1);
-		this.filterVisited((command === 'visited'));
 	}
 
 	render() {

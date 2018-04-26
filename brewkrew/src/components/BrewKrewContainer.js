@@ -5,19 +5,48 @@ const Menu = require('./Menu');
 const Search = require('./Search');
 const Map = require('./Map');
 const AnchorButton = require('./AnchorButton');
+const List = require('./List');
+const data = require('../db');
 
 class BrewKrewContainer extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { searchTerm: '' };
-		this.setSearchTerm = this.setSearchTerm.bind(this);
+		this.state = { searchTerm: '', results: [] };
+		this.triggerSearch = this.triggerSearch.bind(this);
+		this.filterMarkers = this.filterMarkers.bind(this);
+		this.filterVisited = this.filterVisited.bind(this);
+
+		this.data = data;
 	}
 
-	setSearchTerm(term) {
-		this.setState({searchTerm: term});
+	triggerSearch(term) {
+		let results = (term.startsWith(':')) ? this.executeCommand(term) : this.filterMarkers(term);
+		this.setState({searchTerm: term, results });
+	}
+
+	executeCommand(rawCommand) {
+		const command = rawCommand.substring(1);
+		return this.filterVisited((command.toLowerCase() === 'visited'));
+	}
+
+	filterMarkers(label) {
+		return this.data.reduce((acc, brewery, index) => {
+			if (brewery.label.toLowerCase().indexOf(label.toLowerCase()) !== -1)
+				return acc.concat(Object.assign(brewery, { index }));
+			return acc;
+		}, []);
+	}
+
+	filterVisited(visited) {
+		return this.data.reduce((acc, brewery, index) => {
+			if (brewery.visited === visited)
+				return acc.concat(Object.assign(brewery, { index }));
+			return acc;
+		}, []);
 	}
 
 	render() {
+		const results = (this.state.searchTerm) ? this.state.results : data;
 		return (
 			<ErrorBoundary>
 				<div className='bk-container'>
@@ -29,15 +58,19 @@ class BrewKrewContainer extends React.Component {
 							<header className='bk-header'><h1>Brew Krew</h1></header>
 						</div>
 						<div className='bk-heading-item'>
-							<Search value={this.state.searchTerm} onChange={this.setSearchTerm}/>
+							<Search value={this.state.searchTerm} onChange={this.triggerSearch} results={this.state.results}/>
 						</div>
 					</HeaderContainer>
-					<div className='bk-section'>
-						<AnchorButton targetUp='map' targetDown='section2'>
-							<Map google={this.props.google} searchTerm={this.state.searchTerm}/>
-						</AnchorButton>
+					<div className='bk-sections-container'>
+						<div className='bk-section'>
+							<AnchorButton targetUp='map' targetDown='section2'>
+								<Map google={this.props.google} data={data} points={results} />
+							</AnchorButton>
+						</div>
+						<div className='bk-section' id='section2'>
+							<List data={results}/>
+						</div>
 					</div>
-					<div className='bk-section' id='section2'></div>
 				</div>
 			</ErrorBoundary>
 		);

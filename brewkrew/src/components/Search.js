@@ -1,7 +1,7 @@
 const React = require('react');
 const SearchResultsDropdown = require('./SearchResultsDropdown');
 
-class Search extends React.Component {
+class Search extends React.PureComponent {
 	constructor(props) {
 		super(props)
 		this.state = { searchOpen: false };

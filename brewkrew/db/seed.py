@@ -28,14 +28,17 @@ def seed():
 	data = []
 	with open('breweries.csv', mode='r') as csvfile:
 		beerreader = csv.DictReader(csvfile)
+		index = 0
 		for row in beerreader:
 			brewery_data = {}
 			brewery_data['label'] = row['Website']
 			brewery_data['address'] = row['Address']
 			brewery_data['visited'] = row['Done?'] == '1'
+			brewery_data['id'] = index
 			brewery_data['coordinates'] = getLatAndLong(row['Address'])
 			print('Done reading', brewery_data['label'], brewery_data['coordinates'])
 			data.append(brewery_data)
+			index += 1
 	
 	print('Done creating data')
 	with open('breweries.json', mode='w') as jsonfile:
