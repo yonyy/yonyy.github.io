@@ -30,19 +30,15 @@ class BrewKrewContainer extends React.Component {
 	}
 
 	filterMarkers(label) {
-		return this.data.reduce((acc, brewery, index) => {
-			if (brewery.label.toLowerCase().indexOf(label.toLowerCase()) !== -1)
-				return acc.concat(Object.assign(brewery, { index }));
-			return acc;
-		}, []);
+		return this.data.filter((brewery) => {
+			return brewery.label.toLowerCase().indexOf(label.toLowerCase()) !== -1;
+		});
 	}
 
 	filterVisited(visited) {
 		return this.data.reduce((acc, brewery, index) => {
-			if (brewery.visited === visited)
-				return acc.concat(Object.assign(brewery, { index }));
-			return acc;
-		}, []);
+			return brewery.visited === visited;
+		});
 	}
 
 	render() {

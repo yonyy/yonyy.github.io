@@ -67,7 +67,7 @@ class Map extends React.Component {
 
 	filterOutData() {
 		const points = this.props.points;
-		const indices = points.map(p => p.index);
+		const indices = points.map(p => p.id);
 		this.markers.map((m, index) => {
 			if (indices.indexOf(index) === -1)
 				m.setMap(null);

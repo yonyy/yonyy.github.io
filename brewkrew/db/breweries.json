@@ -2,6 +2,7 @@
     {
         "visited": false,
         "address": "1501 E St, San Diego, CA 92101",
+        "id": 0,
         "coordinates": {
             "lat": 32.7144596,
             "lng": -117.1501656
@@ -11,6 +12,7 @@
     {
         "visited": false,
         "address": "8680 Miralani Drive #123, San Diego, CA 92126",
+        "id": 1,
         "coordinates": {
             "lat": 32.8966532,
             "lng": -117.1372753
@@ -20,6 +22,7 @@
     {
         "visited": true,
         "address": "8555 Production Avenue, Suite A, San Diego, CA 92121",
+        "id": 2,
         "coordinates": {
             "lat": 32.8806222,
             "lng": -117.1652732
@@ -29,6 +32,7 @@
     {
         "visited": false,
         "address": "16990 Via Tazon, Suite 124, San Diego, CA 92127",
+        "id": 3,
         "coordinates": {
             "lat": 33.0236355,
             "lng": -117.0859077
@@ -38,6 +42,7 @@
     {
         "visited": false,
         "address": "1795 Hancock Street, Suite P1, San Diego, CA 92110",
+        "id": 4,
         "coordinates": {
             "lat": 32.7422734,
             "lng": -117.184648
@@ -47,6 +52,7 @@
     {
         "visited": false,
         "address": "9990 AleSmith Ct., San Diego, CA 92126",
+        "id": 5,
         "coordinates": {
             "lat": 32.8882176,
             "lng": -117.149821
@@ -56,6 +62,7 @@
     {
         "visited": false,
         "address": "8680 Miralani Dr, San Diego, CA 92121",
+        "id": 6,
         "coordinates": {
             "lat": 32.8966532,
             "lng": -117.1372753
@@ -65,6 +72,7 @@
     {
         "visited": false,
         "address": "2351 Alpine Boulevard, Alpine CA 91901",
+        "id": 7,
         "coordinates": {
             "lat": 32.8351688,
             "lng": -116.7626655
@@ -74,6 +82,7 @@
     {
         "visited": false,
         "address": "4150 Mission Blvd #208, San Diego, CA 92109",
+        "id": 8,
         "coordinates": {
             "lat": 32.791766,
             "lng": -117.2543247
@@ -83,6 +92,7 @@
     {
         "visited": false,
         "address": "9030 Kenamar Drive, Unit 309, San Diego, CA 92121",
+        "id": 9,
         "coordinates": {
             "lat": 32.8866311,
             "lng": -117.1571274
@@ -92,6 +102,7 @@
     {
         "visited": false,
         "address": "5621 Palmer Way, Suite C, Carlsbad, CA 92010",
+        "id": 10,
         "coordinates": {
             "lat": 33.1402104,
             "lng": -117.2739244
@@ -101,6 +112,7 @@
     {
         "visited": false,
         "address": "3416 Adams Avenue, San Diego, CA 92116",
+        "id": 11,
         "coordinates": {
             "lat": 32.763498,
             "lng": -117.1203007
@@ -110,6 +122,7 @@
     {
         "visited": false,
         "address": "2330 La Mirada Dr. Suite 300, Vista CA 92081",
+        "id": 12,
         "coordinates": {
             "lat": 33.149647,
             "lng": -117.23004
@@ -119,6 +132,7 @@
     {
         "visited": false,
         "address": "15 Main Street, Suite #100, Vista, CA 92084",
+        "id": 13,
         "coordinates": {
             "lat": 33.200008,
             "lng": -117.244742
@@ -128,6 +142,7 @@
     {
         "visited": false,
         "address": "601 South Coast Highway, Oceanside CA 92054",
+        "id": 14,
         "coordinates": {
             "lat": 33.1893679,
             "lng": -117.374349
@@ -137,6 +152,7 @@
     {
         "visited": false,
         "address": "10051 Old Grove Road, San Diego, CA 92131",
+        "id": 15,
         "coordinates": {
             "lat": 32.8985252,
             "lng": -117.1109407
@@ -146,6 +162,7 @@
     {
         "visited": false,
         "address": "5401 Linda Vista Rd., Suite 406, San Diego, CA 92110",
+        "id": 16,
         "coordinates": {
             "lat": 32.7667161,
             "lng": -117.1952639
@@ -155,6 +172,7 @@
     {
         "visited": false,
         "address": "2215 India Street, San Diego, CA 92101",
+        "id": 17,
         "coordinates": {
             "lat": 32.7276346,
             "lng": -117.1697179
@@ -164,6 +182,7 @@
     {
         "visited": false,
         "address": "2850 El Cajon Boulevard Ste 3, San Diego, CA 92104",
+        "id": 18,
         "coordinates": {
             "lat": 32.7555903,
             "lng": -117.1323809
@@ -173,6 +192,7 @@
     {
         "visited": false,
         "address": "2575 Pioneer Avenue #104, Vista, CA 92081",
+        "id": 19,
         "coordinates": {
             "lat": 33.1488745,
             "lng": -117.2215877
@@ -182,6 +202,7 @@
     {
         "visited": false,
         "address": "8125 Ronson Rd, Unit F, San Diego, CA 92111",
+        "id": 20,
         "coordinates": {
             "lat": 32.8289272,
             "lng": -117.1479941
@@ -191,6 +212,7 @@
     {
         "visited": false,
         "address": "2870 Scott St, Vista, CA 92081",
+        "id": 21,
         "coordinates": {
             "lat": 33.14042209999999,
             "lng": -117.227523
@@ -200,6 +222,7 @@
     {
         "visited": false,
         "address": "688 Marsat Court Suite B, Chula Vista, CA 91911",
+        "id": 22,
         "coordinates": {
             "lat": 32.6011946,
             "lng": -117.0832236
@@ -209,6 +232,7 @@
     {
         "visited": false,
         "address": "3760 Hancock St, San Diego, CA 92110",
+        "id": 23,
         "coordinates": {
             "lat": 32.7580336,
             "lng": -117.2118028
@@ -218,6 +242,7 @@
     {
         "visited": false,
         "address": "1213 S. Santa Fe Avenue, Vista, CA 92083",
+        "id": 24,
         "coordinates": {
             "lat": 33.1882421,
             "lng": -117.2263263
@@ -227,6 +252,7 @@
     {
         "visited": false,
         "address": "980 Park Center Drive, Suite A, Vista, CA 92081",
+        "id": 25,
         "coordinates": {
             "lat": 33.1450194,
             "lng": -117.2296725
@@ -236,6 +262,7 @@
     {
         "visited": false,
         "address": "1334 Rocky Point Dr, Oceanside, CA 92056",
+        "id": 26,
         "coordinates": {
             "lat": 33.212524,
             "lng": -117.2915874
@@ -245,6 +272,7 @@
     {
         "visited": false,
         "address": "302 East Broadway, Vista, CA 92084",
+        "id": 27,
         "coordinates": {
             "lat": 33.2021206,
             "lng": -117.2410235
@@ -254,6 +282,7 @@
     {
         "visited": false,
         "address": "6190 Fairmount ave. Suite G, San Diego, CA 92120",
+        "id": 28,
         "coordinates": {
             "lat": 32.7872447,
             "lng": -117.1020698
@@ -263,6 +292,7 @@
     {
         "visited": false,
         "address": "4170 Morena Blvd, San Diego, CA 92117",
+        "id": 29,
         "coordinates": {
             "lat": 32.8157824,
             "lng": -117.2201636
@@ -272,6 +302,7 @@
     {
         "visited": false,
         "address": "2550 Jason Ct, Oceanside, CA 92056",
+        "id": 30,
         "coordinates": {
             "lat": 33.2156117,
             "lng": -117.266739
@@ -281,6 +312,7 @@
     {
         "visited": false,
         "address": "10960 Wheatlands Avenue #101, Santee, CA 92071",
+        "id": 31,
         "coordinates": {
             "lat": 32.8466231,
             "lng": -116.9583633
@@ -290,6 +322,7 @@
     {
         "visited": false,
         "address": "8179 Center Street, La Mesa, CA 91942",
+        "id": 32,
         "coordinates": {
             "lat": 32.7718969,
             "lng": -117.0205938
@@ -299,6 +332,7 @@
     {
         "visited": false,
         "address": "2545 Progress St. Suite D, Vista, CA 92081",
+        "id": 33,
         "coordinates": {
             "lat": 33.148182,
             "lng": -117.2181424
@@ -308,6 +342,7 @@
     {
         "visited": false,
         "address": "8684 Avenida de la Fuente Suite 8, San Diego, CA 92154",
+        "id": 34,
         "coordinates": {
             "lat": 32.5566848,
             "lng": -116.9568186
@@ -317,6 +352,7 @@
     {
         "visited": false,
         "address": "101 N. Coast Highway, Oceanside, CA 92054",
+        "id": 35,
         "coordinates": {
             "lat": 33.1950924,
             "lng": -117.3791266
@@ -326,6 +362,7 @@
     {
         "visited": false,
         "address": "6350 Yarrow Dr, Suite C, Carlsbad, CA 92011",
+        "id": 36,
         "coordinates": {
             "lat": 33.1197823,
             "lng": -117.272939
@@ -335,6 +372,7 @@
     {
         "visited": false,
         "address": "785 Vernon Way, El Cajon, CA 92020",
+        "id": 37,
         "coordinates": {
             "lat": 32.8117415,
             "lng": -116.9724106
@@ -344,6 +382,7 @@
     {
         "visited": false,
         "address": "4202 Sorrento Valley BLVD, Suite L&M, San Diego, CA 92121",
+        "id": 38,
         "coordinates": {
             "lat": 32.9049956,
             "lng": -117.2150299
@@ -353,6 +392,7 @@
     {
         "visited": false,
         "address": "2330 Main St, Suite C, Ramona, CA 92065",
+        "id": 39,
         "coordinates": {
             "lat": 33.027784,
             "lng": -116.8891698
@@ -362,6 +402,7 @@
     {
         "visited": false,
         "address": "294 3rd Ave, Chula Vista, CA 91910",
+        "id": 40,
         "coordinates": {
             "lat": 32.6415632,
             "lng": -117.0803328
@@ -371,6 +412,7 @@
     {
         "visited": false,
         "address": "7292 Opportunity Rd, San Diego, CA 92111",
+        "id": 41,
         "coordinates": {
             "lat": 32.8257279,
             "lng": -117.1607576
@@ -380,6 +422,7 @@
     {
         "visited": false,
         "address": "170 Orange Avenue, Coronado, CA 92118",
+        "id": 42,
         "coordinates": {
             "lat": 32.6977694,
             "lng": -117.1732329
@@ -389,6 +432,7 @@
     {
         "visited": false,
         "address": "1205 Knoxville Street, San Diego, CA 92110",
+        "id": 43,
         "coordinates": {
             "lat": 32.7718721,
             "lng": -117.2045788
@@ -398,6 +442,7 @@
     {
         "visited": false,
         "address": "7705 Convoy Court, San Diego, CA 92111",
+        "id": 44,
         "coordinates": {
             "lat": 32.8345474,
             "lng": -117.1544514
@@ -407,6 +452,7 @@
     {
         "visited": false,
         "address": "111 S. Cedros Ave Suite 200, Solana Beach, CA 92075",
+        "id": 45,
         "coordinates": {
             "lat": 32.9915796,
             "lng": -117.2707116
@@ -416,6 +462,7 @@
     {
         "visited": false,
         "address": "2719 Loker Avenue West Suite D, Carlsbad, CA, 92010",
+        "id": 46,
         "coordinates": {
             "lat": 33.1326935,
             "lng": -117.2585179
@@ -425,6 +472,7 @@
     {
         "visited": false,
         "address": "5328 Banks Street, Ste A, San Diego, CA 92110",
+        "id": 47,
         "coordinates": {
             "lat": 32.7643879,
             "lng": -117.1989393
@@ -434,6 +482,7 @@
     {
         "visited": false,
         "address": "7408 Trade St, San Diego, California 92121",
+        "id": 48,
         "coordinates": {
             "lat": 32.890339,
             "lng": -117.162898
@@ -443,6 +492,7 @@
     {
         "visited": false,
         "address": "1241 Linda Vista Drive, San Marcos, CA 92078",
+        "id": 49,
         "coordinates": {
             "lat": 33.1369175,
             "lng": -117.1934247
@@ -452,6 +502,7 @@
     {
         "visited": true,
         "address": "8920 Kenamar Dr. Suite #210, San Diego, CA 92121",
+        "id": 50,
         "coordinates": {
             "lat": 32.8853381,
             "lng": -117.1564712
@@ -461,6 +512,7 @@
     {
         "visited": false,
         "address": "2449 Cades, Suite D, Vista, CA 92081",
+        "id": 51,
         "coordinates": {
             "lat": 33.1537956,
             "lng": -117.2241602
@@ -470,6 +522,7 @@
     {
         "visited": false,
         "address": "3052 El Cajon Blvd., Suite C San Diego, CA 92104",
+        "id": 52,
         "coordinates": {
             "lat": 32.7555796,
             "lng": -117.1287502
@@ -479,6 +532,7 @@
     {
         "visited": false,
         "address": "649 Rock Springs Road, Escondido, CA 92025",
+        "id": 53,
         "coordinates": {
             "lat": 33.124577,
             "lng": -117.0970089
@@ -488,6 +542,7 @@
     {
         "visited": false,
         "address": "4532 30th Street, San Diego, CA 92104",
+        "id": 54,
         "coordinates": {
             "lat": 32.7598158,
             "lng": -117.1304601
@@ -497,6 +552,7 @@
     {
         "visited": false,
         "address": "136 N Main Ave, Fallbrook, CA",
+        "id": 55,
         "coordinates": {
             "lat": 33.3827003,
             "lng": -117.2515165
@@ -506,6 +562,7 @@
     {
         "visited": false,
         "address": "9962 Prospect Ave, Santee, CA 92071",
+        "id": 56,
         "coordinates": {
             "lat": 32.8319916,
             "lng": -116.9796314
@@ -515,6 +572,7 @@
     {
         "visited": false,
         "address": "5010 Mission Center Road, San Diego, CA 92108",
+        "id": 57,
         "coordinates": {
             "lat": 32.7670751,
             "lng": -117.1539108
@@ -524,6 +582,7 @@
     {
         "visited": true,
         "address": "6550 Mira Mesa Blvd., San Diego, CA 92121",
+        "id": 58,
         "coordinates": {
             "lat": 32.9071098,
             "lng": -117.1777588
@@ -533,6 +592,7 @@
     {
         "visited": false,
         "address": "6304 Riverdale Street, San Diego, CA 92120",
+        "id": 59,
         "coordinates": {
             "lat": 32.7889952,
             "lng": -117.0997872
@@ -542,6 +602,7 @@
     {
         "visited": false,
         "address": "10151 Prospect Avenue, Santee, CA 92071",
+        "id": 60,
         "coordinates": {
             "lat": 32.8307147,
             "lng": -116.9766879
@@ -551,6 +612,7 @@
     {
         "visited": false,
         "address": "5650 El Camino Real, Carlsbad, CA 92008",
+        "id": 61,
         "coordinates": {
             "lat": 33.1395403,
             "lng": -117.2746495
@@ -560,6 +622,7 @@
     {
         "visited": false,
         "address": "903 Island Avenue, San Diego, CA 92101",
+        "id": 62,
         "coordinates": {
             "lat": 32.7102641,
             "lng": -117.1562711
@@ -569,6 +632,7 @@
     {
         "visited": false,
         "address": "5640 Kearny Mesa Rd, Suite C/N, San Diego, CA 92111",
+        "id": 63,
         "coordinates": {
             "lat": 32.8373203,
             "lng": -117.1390676
@@ -578,6 +642,7 @@
     {
         "visited": false,
         "address": "8101 Commercial Street, La Mesa, CA 91942",
+        "id": 64,
         "coordinates": {
             "lat": 32.77201820000001,
             "lng": -117.0233413
@@ -587,6 +652,7 @@
     {
         "visited": false,
         "address": "1458 University Ave, San Diego, CA 92103",
+        "id": 65,
         "coordinates": {
             "lat": 32.749106,
             "lng": -117.1499114
@@ -596,6 +662,7 @@
     {
         "visited": false,
         "address": "2911 El Cajon Boulevard, Space #2, San Diego, CA 92104",
+        "id": 66,
         "coordinates": {
             "lat": 32.755089,
             "lng": -117.130994
@@ -605,6 +672,7 @@
     {
         "visited": false,
         "address": "Oceanside, CA 92154",
+        "id": 67,
         "coordinates": {
             "lat": 32.5758926,
             "lng": -117.07049
@@ -614,6 +682,7 @@
     {
         "visited": false,
         "address": "2123 Industrial Ct, Vista, CA 92081",
+        "id": 68,
         "coordinates": {
             "lat": 33.169495,
             "lng": -117.220383
@@ -623,6 +692,7 @@
     {
         "visited": false,
         "address": "9835 Carroll Centre, Suite 108, San Diego, CA 92126",
+        "id": 69,
         "coordinates": {
             "lat": 32.8987471,
             "lng": -117.1206384
@@ -632,6 +702,7 @@
     {
         "visited": false,
         "address": "1305 Hot Spring Way #101, Vista, CA 92081",
+        "id": 70,
         "coordinates": {
             "lat": 33.1455504,
             "lng": -117.2386297
@@ -641,6 +712,7 @@
     {
         "visited": false,
         "address": "800 West Grand Ave, Escondido, CA 92025",
+        "id": 71,
         "coordinates": {
             "lat": 33.1174244,
             "lng": -117.0917736
@@ -650,6 +722,7 @@
     {
         "visited": false,
         "address": "Jamul, CA 91935",
+        "id": 72,
         "coordinates": {
             "lat": 32.7169988,
             "lng": -116.8761347
@@ -659,6 +732,7 @@
     {
         "visited": false,
         "address": "2315 Main Street, Julian, CA 92036",
+        "id": 73,
         "coordinates": {
             "lat": 33.0791279,
             "lng": -116.6041292
@@ -668,15 +742,17 @@
     {
         "visited": false,
         "address": "10448 Reserve Drive, San Diego, CA 92127",
+        "id": 74,
         "coordinates": {
-            "lat": 33.021177,
-            "lng": -117.113632
+            "lat": 33.0214603,
+            "lng": -117.1134033
         },
         "label": "Karl Strauss 4S Ranch"
     },
     {
         "visited": false,
         "address": "5801 Armada Drive, Carlsbad, CA 92008",
+        "id": 75,
         "coordinates": {
             "lat": 33.1244064,
             "lng": -117.3140153
@@ -686,6 +762,7 @@
     {
         "visited": false,
         "address": "1157 Columbia Street, San Diego, CA 92101",
+        "id": 76,
         "coordinates": {
             "lat": 32.7174547,
             "lng": -117.1670758
@@ -695,6 +772,7 @@
     {
         "visited": false,
         "address": "1044 Wall Street, La Jolla, CA 92037",
+        "id": 77,
         "coordinates": {
             "lat": 32.8471174,
             "lng": -117.2735361
@@ -704,6 +782,7 @@
     {
         "visited": false,
         "address": "5985 Santa Fe Street, San Diego, CA 92109",
+        "id": 78,
         "coordinates": {
             "lat": 32.8320492,
             "lng": -117.2312344
@@ -713,6 +792,7 @@
     {
         "visited": false,
         "address": "9675 Scranton Rd, San Diego, CA 92121",
+        "id": 79,
         "coordinates": {
             "lat": 32.896535,
             "lng": -117.2017648
@@ -722,6 +802,7 @@
     {
         "visited": false,
         "address": "5839 Mission Gorge Road, Suite E, San Diego, CA 92120",
+        "id": 80,
         "coordinates": {
             "lat": 32.7811122,
             "lng": -117.1000736
@@ -731,6 +812,7 @@
     {
         "visited": false,
         "address": "7576 Clairemont Mesa Blvd., San Diego, CA 92111",
+        "id": 81,
         "coordinates": {
             "lat": 32.8331085,
             "lng": -117.1563692
@@ -740,6 +822,7 @@
     {
         "visited": false,
         "address": "6380 Del Cerro Blvd, San Diego, CA 92120",
+        "id": 82,
         "coordinates": {
             "lat": 32.7840052,
             "lng": -117.0599295
@@ -749,6 +832,7 @@
     {
         "visited": false,
         "address": "842 Market St, San Diego, CA 92101",
+        "id": 83,
         "coordinates": {
             "lat": 32.7117775,
             "lng": -117.1568517
@@ -758,6 +842,7 @@
     {
         "visited": false,
         "address": "175 Bosstick Blvd. #104, San Marcos, CA 92069",
+        "id": 84,
         "coordinates": {
             "lat": 33.1616463,
             "lng": -117.2012594
@@ -767,6 +852,7 @@
     {
         "visited": false,
         "address": "7536 Fay Avenue, San Diego, CA 92037",
+        "id": 85,
         "coordinates": {
             "lat": 32.8408148,
             "lng": -117.2743615
@@ -776,6 +862,7 @@
     {
         "visited": false,
         "address": "1430 Vantage Court, Suite 104, Vista, CA 92081",
+        "id": 86,
         "coordinates": {
             "lat": 33.1360651,
             "lng": -117.2248951
@@ -785,6 +872,7 @@
     {
         "visited": false,
         "address": "363 Airport Road Oceanside, CA 92058",
+        "id": 87,
         "coordinates": {
             "lat": 33.2153901,
             "lng": -117.3507698
@@ -794,6 +882,7 @@
     {
         "visited": false,
         "address": "7649 Stromesa Ct, Suite Y, San Diego, CA 92126",
+        "id": 88,
         "coordinates": {
             "lat": 32.8925649,
             "lng": -117.1484446
@@ -803,6 +892,7 @@
     {
         "visited": false,
         "address": "10320 Camino Santa Fe, San Diego, CA 92121",
+        "id": 89,
         "coordinates": {
             "lat": 32.9040608,
             "lng": -117.1714639
@@ -812,6 +902,7 @@
     {
         "visited": false,
         "address": "2002 S Coast Hwy, Oceanside, CA, 92054",
+        "id": 90,
         "coordinates": {
             "lat": 33.1720729,
             "lng": -117.3591228
@@ -821,6 +912,7 @@
     {
         "visited": false,
         "address": "255 Redel Rd, San Marcos, CA 92078",
+        "id": 91,
         "coordinates": {
             "lat": 33.1358939,
             "lng": -117.1585644
@@ -830,6 +922,7 @@
     {
         "visited": false,
         "address": "3801 Oceanic Dr, Oceanside, CA 92058",
+        "id": 92,
         "coordinates": {
             "lat": 33.205154,
             "lng": -117.3046252
@@ -839,6 +932,7 @@
     {
         "visited": false,
         "address": "3812 Grim Avenue, San Diego, CA 92104",
+        "id": 93,
         "coordinates": {
             "lat": 32.7476888,
             "lng": -117.1285434
@@ -848,6 +942,7 @@
     {
         "visited": false,
         "address": "9368 Cabbot Dr, San Diego, CA 92126",
+        "id": 94,
         "coordinates": {
             "lat": 32.8923805,
             "lng": -117.1447381
@@ -857,6 +952,7 @@
     {
         "visited": false,
         "address": "1441 L Street, San Diego, CA 92101",
+        "id": 95,
         "coordinates": {
             "lat": 32.7071477,
             "lng": -117.1515916
@@ -866,6 +962,7 @@
     {
         "visited": false,
         "address": "3725 Greenwood Street, San Diego, CA 92110",
+        "id": 96,
         "coordinates": {
             "lat": 32.7542044,
             "lng": -117.2061981
@@ -875,6 +972,7 @@
     {
         "visited": false,
         "address": "805 16th Street, San Diego, CA 92101",
+        "id": 97,
         "coordinates": {
             "lat": 32.7138573,
             "lng": -117.1492466
@@ -884,6 +982,7 @@
     {
         "visited": false,
         "address": "2055 Thibodo Road, Suite H, Vista, CA 92081",
+        "id": 98,
         "coordinates": {
             "lat": 33.1677133,
             "lng": -117.2203174
@@ -893,6 +992,7 @@
     {
         "visited": false,
         "address": "11545 Sorrento Valley Road, Suite 305, San Diego, CA 92121",
+        "id": 99,
         "coordinates": {
             "lat": 32.9127354,
             "lng": -117.2306057
@@ -902,6 +1002,7 @@
     {
         "visited": false,
         "address": "1485 Hollow Glen Road, Julian, CA 92036",
+        "id": 100,
         "coordinates": {
             "lat": 33.0765814,
             "lng": -116.5905432
@@ -911,6 +1012,7 @@
     {
         "visited": false,
         "address": "3038 University Ave, San Diego, CA 92104",
+        "id": 101,
         "coordinates": {
             "lat": 32.7487183,
             "lng": -117.1291179
@@ -920,6 +1022,7 @@
     {
         "visited": false,
         "address": "326 N. Horne, Oceanside, CA 92054",
+        "id": 102,
         "coordinates": {
             "lat": 33.1998358,
             "lng": -117.3769334
@@ -929,6 +1032,7 @@
     {
         "visited": false,
         "address": "901 Lane Av, Chula Vista, California 91914",
+        "id": 103,
         "coordinates": {
             "lat": 32.6520158,
             "lng": -116.9614181
@@ -938,6 +1042,7 @@
     {
         "visited": false,
         "address": "5041 Newport Ave, San Diego, CA 92107",
+        "id": 104,
         "coordinates": {
             "lat": 32.7472201,
             "lng": -117.2519729
@@ -947,6 +1052,7 @@
     {
         "visited": false,
         "address": "1800 Ord Way, Oceanside, CA 92056",
+        "id": 105,
         "coordinates": {
             "lat": 33.2113331,
             "lng": -117.2731069
@@ -956,6 +1062,7 @@
     {
         "visited": false,
         "address": "312 Via Del Norte, Oceanside, CA 92058",
+        "id": 106,
         "coordinates": {
             "lat": 33.2128018,
             "lng": -117.3522371
@@ -965,6 +1072,7 @@
     {
         "visited": false,
         "address": "9879 Hibert Street, Suite F, San Diego, CA 92131",
+        "id": 107,
         "coordinates": {
             "lat": 32.9132595,
             "lng": -117.1127791
@@ -974,6 +1082,7 @@
     {
         "visited": false,
         "address": "721 Grand Avenue, San Diego, CA 92109",
+        "id": 108,
         "coordinates": {
             "lat": 32.7943249,
             "lng": -117.2553488
@@ -983,6 +1092,7 @@
     {
         "visited": false,
         "address": "8665 Argent St Ste B, Santee, CA 92071",
+        "id": 109,
         "coordinates": {
             "lat": 32.8328875,
             "lng": -116.9889673
@@ -992,6 +1102,7 @@
     {
         "visited": false,
         "address": "3052 El Cajon Blvd, Suite B, San Diego, CA 92104",
+        "id": 110,
         "coordinates": {
             "lat": 32.7555796,
             "lng": -117.1287502
@@ -1001,6 +1112,7 @@
     {
         "visited": false,
         "address": "2730 Gateway Road, Carlsbad, CA 92009",
+        "id": 111,
         "coordinates": {
             "lat": 33.1286712,
             "lng": -117.2500668
@@ -1010,6 +1122,7 @@
     {
         "visited": false,
         "address": "571 Carlsbad Village Drive, Carlsbad, CA 92008",
+        "id": 112,
         "coordinates": {
             "lat": 33.1599094,
             "lng": -117.3477378
@@ -1019,6 +1132,7 @@
     {
         "visited": false,
         "address": "1956 Bacon Street, San Diego CA 92107",
+        "id": 113,
         "coordinates": {
             "lat": 32.7479652,
             "lng": -117.250302
@@ -1028,6 +1142,7 @@
     {
         "visited": false,
         "address": "135 North Highway 101, Solana Beach, 92075",
+        "id": 114,
         "coordinates": {
             "lat": 32.992923,
             "lng": -117.272216
@@ -1037,6 +1152,7 @@
     {
         "visited": false,
         "address": "155 E. Grand Avenue, Escondido, CA 92025",
+        "id": 115,
         "coordinates": {
             "lat": 33.1219384,
             "lng": -117.0801782
@@ -1046,6 +1162,7 @@
     {
         "visited": false,
         "address": "4494 30th Street, San Diego, CA 92116",
+        "id": 116,
         "coordinates": {
             "lat": 32.7589732,
             "lng": -117.1303887
@@ -1055,6 +1172,7 @@
     {
         "visited": false,
         "address": "155 Mata Way #104, San Marcos, CA 92069",
+        "id": 117,
         "coordinates": {
             "lat": 33.1416287,
             "lng": -117.1493614
@@ -1064,6 +1182,7 @@
     {
         "visited": false,
         "address": "San Marcos, CA",
+        "id": 118,
         "coordinates": {
             "lat": 33.1433723,
             "lng": -117.1661449
@@ -1073,6 +1192,7 @@
     {
         "visited": false,
         "address": "2004 E. Vista Way Vista, CA 92084",
+        "id": 119,
         "coordinates": {
             "lat": 33.2304468,
             "lng": -117.2265948
@@ -1082,6 +1202,7 @@
     {
         "visited": true,
         "address": "8680 Miralani Dr #128, San Diego, CA 92126",
+        "id": 120,
         "coordinates": {
             "lat": 32.8966532,
             "lng": -117.1372753
@@ -1091,6 +1212,7 @@
     {
         "visited": false,
         "address": "9030 Kenamar Dr #308 San Diego, Ca 92121",
+        "id": 121,
         "coordinates": {
             "lat": 32.8866311,
             "lng": -117.1571274
@@ -1100,6 +1222,7 @@
     {
         "visited": false,
         "address": "5375 Kearny Villa Road #116, San Diego, CA 92123",
+        "id": 122,
         "coordinates": {
             "lat": 32.8308894,
             "lng": -117.1384012
@@ -1109,6 +1232,7 @@
     {
         "visited": false,
         "address": "9040 Carroll Way, Suite 8, San Diego, CA 92121",
+        "id": 123,
         "coordinates": {
             "lat": 32.8880071,
             "lng": -117.1596088
@@ -1118,6 +1242,7 @@
     {
         "visited": false,
         "address": "411 C St, San Diego, CA 92101",
+        "id": 124,
         "coordinates": {
             "lat": 32.7165795,
             "lng": -117.1605885
@@ -1127,6 +1252,7 @@
     {
         "visited": false,
         "address": "1325 Grand Avenue #100, San Marcos, CA 92078",
+        "id": 125,
         "coordinates": {
             "lat": 33.1427524,
             "lng": -117.1925073
@@ -1136,6 +1262,7 @@
     {
         "visited": false,
         "address": "8980 Villa La Jolla Drive, San Diego, CA 92037",
+        "id": 126,
         "coordinates": {
             "lat": 32.8712909,
             "lng": -117.234266
@@ -1145,6 +1272,7 @@
     {
         "visited": true,
         "address": "8830 Rehco Rd. Suite D, San Diego CA 92121",
+        "id": 127,
         "coordinates": {
             "lat": 32.8834869,
             "lng": -117.1717856
@@ -1154,6 +1282,7 @@
     {
         "visited": false,
         "address": "5840 El Camino Real, Suite 101, Carlsbad, CA 92008",
+        "id": 128,
         "coordinates": {
             "lat": 33.1345148,
             "lng": -117.2700916
@@ -1163,6 +1292,7 @@
     {
         "visited": false,
         "address": "10450 Friars Rd. Ste. L, San Diego, CA 92120",
+        "id": 129,
         "coordinates": {
             "lat": 32.7916911,
             "lng": -117.0981184
@@ -1172,6 +1302,7 @@
     {
         "visited": false,
         "address": "3052 El Cajon Blvd, San Diego, CA 92104",
+        "id": 130,
         "coordinates": {
             "lat": 32.7555796,
             "lng": -117.1287502
@@ -1181,6 +1312,7 @@
     {
         "visited": false,
         "address": "1080 W. San Marcos Blvd. #108, San Marcos, CA 92078",
+        "id": 131,
         "coordinates": {
             "lat": 33.1344351,
             "lng": -117.1909682
@@ -1190,6 +1322,7 @@
     {
         "visited": false,
         "address": "15378 Avenue of Science #222, San Diego, CA 92128",
+        "id": 132,
         "coordinates": {
             "lat": 32.9947534,
             "lng": -117.0820744
@@ -1199,6 +1332,7 @@
     {
         "visited": false,
         "address": "780 Main St, Ramona, CA 92065",
+        "id": 133,
         "coordinates": {
             "lat": 33.0436042,
             "lng": -116.8649909
@@ -1208,6 +1342,7 @@
     {
         "visited": false,
         "address": "8262 Clairemont Mesa Blvd San Diego, CA 92111",
+        "id": 134,
         "coordinates": {
             "lat": 32.8338579,
             "lng": -117.1463732
@@ -1217,6 +1352,7 @@
     {
         "visited": false,
         "address": "1537 30th Street, San Diego, CA 92102",
+        "id": 135,
         "coordinates": {
             "lat": 32.7220418,
             "lng": -117.1298992
@@ -1226,6 +1362,7 @@
     {
         "visited": false,
         "address": "1280 Activity Dr, Vista, CA 92081",
+        "id": 136,
         "coordinates": {
             "lat": 33.14194519999999,
             "lng": -117.2194286
@@ -1235,6 +1372,7 @@
     {
         "visited": false,
         "address": "777 Harrah's Rincon Way, Valley Center, CA 92082",
+        "id": 137,
         "coordinates": {
             "lat": 33.267594,
             "lng": -116.9554387
@@ -1244,6 +1382,7 @@
     {
         "visited": false,
         "address": "9550 Distribution Ave. San Diego, CA 92121",
+        "id": 138,
         "coordinates": {
             "lat": 32.8804822,
             "lng": -117.1634659
@@ -1253,6 +1392,7 @@
     {
         "visited": false,
         "address": "1999 Citracado Parkway, Escondido, CA 92029",
+        "id": 139,
         "coordinates": {
             "lat": 33.1158112,
             "lng": -117.1200116
@@ -1261,7 +1401,8 @@
     },
     {
         "visited": false,
-        "address": "2816 Historic Decatur Rd #116, San Diego, CA 92106",
+        "address": "2816 Historic Decatur Rd #116‎, San Diego, CA 92106",
+        "id": 140,
         "coordinates": {
             "lat": 32.7401545,
             "lng": -117.2111952
@@ -1271,6 +1412,7 @@
     {
         "visited": false,
         "address": "1784 La Costa Meadows Dr #103, San Marcos, CA 92078",
+        "id": 141,
         "coordinates": {
             "lat": 33.1049415,
             "lng": -117.2193149
@@ -1280,6 +1422,7 @@
     {
         "visited": false,
         "address": "3176 Thorn St., San Diego, CA 92104",
+        "id": 142,
         "coordinates": {
             "lat": 32.7393987,
             "lng": -117.1254989
@@ -1289,6 +1432,7 @@
     {
         "visited": false,
         "address": "259 3rd Ave, Chula Vista, CA 91910",
+        "id": 143,
         "coordinates": {
             "lat": 32.6428434,
             "lng": -117.0801667
@@ -1298,6 +1442,7 @@
     {
         "visited": false,
         "address": "8675 Miralani Dr, Suite 100, San Diego, CA 92126",
+        "id": 144,
         "coordinates": {
             "lat": 32.8957913,
             "lng": -117.1374768
@@ -1307,6 +1452,7 @@
     {
         "visited": false,
         "address": "1495 Poinsettia Avenue, Suite 148, Vista, CA 92071",
+        "id": 145,
         "coordinates": {
             "lat": 33.13669730000001,
             "lng": -117.2268704
@@ -1316,6 +1462,7 @@
     {
         "visited": false,
         "address": "2201 San Dieguito Dr, Del Mar, CA 92014",
+        "id": 146,
         "coordinates": {
             "lat": 32.9699356,
             "lng": -117.2617788
@@ -1325,6 +1472,7 @@
     {
         "visited": false,
         "address": "326 Main Street, Vista, CA 92084",
+        "id": 147,
         "coordinates": {
             "lat": 33.2031682,
             "lng": -117.2410031
@@ -1334,6 +1482,7 @@
     {
         "visited": false,
         "address": "9495 Candida Street, San Diego, CA 92126",
+        "id": 148,
         "coordinates": {
             "lat": 32.8957219,
             "lng": -117.1213738
@@ -1343,6 +1492,7 @@
     {
         "visited": false,
         "address": "692 Rancheros Dr, San Marcos, CA 92069",
+        "id": 149,
         "coordinates": {
             "lat": 33.140147,
             "lng": -117.145759
@@ -1352,6 +1502,7 @@
     {
         "visited": false,
         "address": "5840 El Camino Real, Suite 100, Carlsbad, CA 92008",
+        "id": 150,
         "coordinates": {
             "lat": 33.1345148,
             "lng": -117.2700916
