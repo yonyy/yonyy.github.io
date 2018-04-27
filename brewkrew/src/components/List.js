@@ -21,10 +21,8 @@ class List extends React.PureComponent {
 			<div>
 				<ul>
 					{
-						this.props.data.map((b, i) => {
-							let { index } = b;
-							let key = index || i;
-							return <Li brewery={b} key={key}/>
+						this.props.data.map((b) => {
+							return <Li brewery={b} key={b.id}/>
 						})
 					}
 				</ul>

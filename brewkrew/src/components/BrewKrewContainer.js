@@ -36,7 +36,7 @@ class BrewKrewContainer extends React.Component {
 	}
 
 	filterVisited(visited) {
-		return this.data.reduce((acc, brewery, index) => {
+		return this.data.filter((brewery) => {
 			return brewery.visited === visited;
 		});
 	}
