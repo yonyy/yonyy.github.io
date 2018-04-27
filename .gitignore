@@ -1,6 +1,6 @@
 node_modules/
 .vscode
 **/.DS_Store
-./brewkrew/db/client_secret.json
-./brewkrew/db/credentials.json
-./brewkrew/db/api-key.json
+brewkrew/db/client_secret.json
+brewkrew/db/credentials.json
+brewkrew/db/api-key.json
