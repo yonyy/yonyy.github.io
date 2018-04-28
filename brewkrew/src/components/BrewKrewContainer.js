@@ -7,6 +7,7 @@ const Search = require('./Search');
 const Map = require('./Map');
 const AnchorButton = require('./AnchorButton');
 const PaginationCards = require('./PaginationCards');
+const Conquerors = require('./Conquerors');
 const data = require('../db');
 
 class BrewKrewContainer extends React.Component {
@@ -66,12 +67,15 @@ class BrewKrewContainer extends React.Component {
 					</HeaderContainer>
 					<div className='bk-sections-container'>
 						<div className='bk-section'>
-							<AnchorButton targetUp='map' targetDown='section2'>
+							<AnchorButton targetUp='map' targetDown='cards'>
 								<Map google={this.props.google} data={data} points={results} />
 							</AnchorButton>
 						</div>
-						<div className='bk-section' id='section2'>
+						<div className='bk-section' id='cards'>
 							<PaginationCards limit={this.cardListLimit} breweries={results} pageNumber={this.state.pageNumber} setPage={this.setPage}/>
+						</div>
+						<div className='bk-section' id='conquerors'>
+							<Conquerors />
 						</div>
 					</div>
 				</div>

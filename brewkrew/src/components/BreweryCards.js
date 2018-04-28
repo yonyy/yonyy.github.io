@@ -8,6 +8,8 @@ class BreweryCards extends React.Component {
 		super(props);
 
 		this.state = { activeCard: null };
+
+		this.onClick = this.onClick.bind(this);
 	}
 
 	onClick({ yelp }) {
@@ -20,7 +22,7 @@ class BreweryCards extends React.Component {
 				<div className='bk-cards-row'>
 					{
 						this.props.breweries.map((brewery) => {
-							return <BreweryCard brewery={brewery} key={brewery.id} />;
+							return <BreweryCard onClick={this.onClick} brewery={brewery} key={brewery.id} />;
 						})
 					}
 				</div>

@@ -1,5 +1,6 @@
 const React = require('react');
 const PropTypes = require('prop-types');
+const smoothScroll = require('./util/smoothScroll');
 
 class AnchorButton extends React.PureComponent {
 	constructor(props) {
@@ -11,9 +12,7 @@ class AnchorButton extends React.PureComponent {
 
 	smoothScroll(evt) {
 		evt.preventDefault();
-		document.getElementById(this.target)
-			.scrollIntoView({behavior: 'smooth'});
-
+		smoothScroll(this.target);
 		this.setState({reverse: !this.state.reverse});
 	}
 
@@ -24,14 +23,14 @@ class AnchorButton extends React.PureComponent {
 		const reverseClass = (this.state.reverse) ? ' bk-reverse' : '';
 
 		return (
-			<div>
+			<React.Fragment>
 				<div className='bk-down-link'>
 					<a className='bk-link bk-button-icon' href={'#' + this.target} onClick={this.smoothScroll}>
 						<i className={'fas fa-arrow-down bk-icon bk-transform-reverse' + reverseClass}></i>
 					</a>
 				</div>
 				{ this.props.children }
-			</div>
+			</React.Fragment>
 		);
 	}
 }

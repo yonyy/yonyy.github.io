@@ -18,7 +18,7 @@ const JS_FILES = 'brewkrew/src/**/*.js';
 const JS_FILE = 'brewkrew/src/index.js';
 
 gulp.task('build-dev', function() {
-	process.env = 'development';
+	process.env.NODE_ENV = 'development';
 	const bundler = browserify({ entries: [JS_FILE], debug: true })
 		.transform(babel.configure({
 			presets: ['env', 'react']
@@ -44,7 +44,7 @@ gulp.task('build-dev', function() {
 
 
 gulp.task('build-prod', function() {
-	process.env = 'production';
+	process.env.NODE_ENV = 'production';
 	const bundler = browserify({ entries: [JS_FILE], debug: true })
 		.transform(babel.configure({
 			presets: ['env', 'react']

@@ -1,7 +1,7 @@
 @import './variables';
 
 #map {
-	height: 500px;
+	height: 100%;
 }
 
 .bk-container {
@@ -225,10 +225,6 @@
 	.bk-section {
 		position: relative;
 		height: 500px;
-
-		&.bk-section-cards {
-			height: 600px;
-		}
 	}
 }
 
@@ -338,15 +334,62 @@
 		}
 
 		.bk-control-disabled {
-			color: #2121213b;
+			color: $button-disabled-color;
 		}
 	}
 }
 
+.bk-conquerors-container {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	padding: 15px;
+	height: 100%;
+
+	.bk-conqueror-container {
+		width: 200px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.bk-conqueror-img-container {
+			text-align: center;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+
+			.bk-conqueror-img {
+				display: flex;
+				justify-content: center;
+				height: 100px;
+				width: 100px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background-color: #cacaca60;
+				border-radius: 50px;
+
+				.bk-conqueror-initials{
+					font-size: 1.75em;
+					letter-spacing: 0em;
+				}
+			}
+		}
+	
+		.bk-conqueror-name {
+			text-align: center;
+			font-size: 1.25em;
+		}
+	}
+}
+
+
 //@media all and (max-width: 1280px) {}
 //@media all and (max-width: 980px) { ... }
+//@media all and (max-width: 736px) {}
 
-@media all and (max-width: 736px) {
+@media all and (max-width: 480px) {
 	.bk-button-icon {
 		width: 1.75em;
 		height: 1.75em;
@@ -401,19 +444,45 @@
 	}
 
 	.bk-cards-container {
+		padding: 5px;
 		.bk-cards-row {
 			.bk-card-container {
 				width: 50%;
-				height: 100px;
+				height: 80px;
 	
 				.bk-card {
-					padding: 10px;
+					padding: 5px;
 					font-size: 0.5em;
 				}
 			}
 		}
 	}
+	
+	.bk-conquerors-container {
+		padding: 5px;
+	
+		.bk-conqueror-container {
+			width: auto;
+			height: auto;
+			flex-grow: 1;
+	
+			.bk-conqueror-img-container {
+				.bk-conqueror-img {
+					height: 50px;
+					width: 50px;
+					border-radius: 25px;
+	
+					.bk-conqueror-initials{
+						font-size: 1em;
+						letter-spacing: 0em;
+					}
+				}
+			}
 		
+			.bk-conqueror-name {
+				text-align: center;
+				font-size: 0.75em;
+			}
+		}
+	}
 }
-
-//@media all and (max-width: 480px) {}

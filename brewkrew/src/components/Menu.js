@@ -1,5 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+const smoothScroll = require('./util/smoothScroll');
 
 const ESC = 'Escape';
 
@@ -10,6 +11,7 @@ class Menu extends React.PureComponent {
 		this.toggleNav = this.toggleNav.bind(this);
 		this.resetFocus = this.resetFocus.bind(this);
 		this.captureEsc = this.captureEsc.bind(this);
+		this.smoothScroll = this.smoothScroll.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -37,14 +39,19 @@ class Menu extends React.PureComponent {
 		this.resetFocus();
 	}
 
-	toggleNav(evt) {
+	toggleNav() {
 		this.setState({navOpen: !this.state.navOpen});
-		evt.stopPropagation();
 	}
 
 	resetFocus() {
 		let node = ReactDOM.findDOMNode(this.navButtonRef);
 		node.focus();
+	}
+
+	smoothScroll(evt) {
+		evt.preventDefault();
+		const target = evt.target.getAttribute('href').split('#')[1];
+		smoothScroll(target);
 	}
 
 	render() {
@@ -59,10 +66,10 @@ class Menu extends React.PureComponent {
 				<nav className={bkNavClass}>
 					<ul className='bk-nav-list' >
 						<li className='bk-nav-list-item'>
-							<a className='bk-link' href='#'>The Conquered</a>
+							<a className='bk-link' href='#cards' onClick={this.smoothScroll}>The Conquered</a>
 						</li>
 						<li className='bk-nav-list-item'>
-							<a className='bk-link' href='#'>The Conquerors</a>
+							<a className='bk-link' href='#conquerors' onClick={this.smoothScroll}>The Krew</a>
 						</li>
 						<li className='bk-nav-list-item'>
 							<a className='bk-link' href='https://github.com/yonyy/yonyy.github.io'>Curious? <i className='bk-icon fas fa-code'></i></a>
