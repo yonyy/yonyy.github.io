@@ -6,7 +6,7 @@ const app = express();
 const index = path.resolve(__dirname, 'index.html');
 
 app.use(express.static('brewkrew'));
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
 	res.sendFile(index);
 });
 

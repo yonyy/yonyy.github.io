@@ -53,7 +53,7 @@ class Menu extends React.PureComponent {
 
 		return (
 			<div className='bk-nav-container'>
-				<button ref={(node) => { this.navButtonRef = node }} onClick={controlOnClick} className='bk-button bk-button-icon bk-nav-control'>
+				<button ref={(node) => { this.navButtonRef = node; }} onClick={controlOnClick} className='bk-button bk-button-icon bk-nav-control'>
 					<i className='bk-icon fas fa-bars bk-icon'></i>
 				</button>
 				<nav className={bkNavClass}>
@@ -70,7 +70,7 @@ class Menu extends React.PureComponent {
 					</ul>
 				</nav>
 			</div>
-		)
+		);
 	}
 }
 

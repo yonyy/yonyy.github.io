@@ -1,3 +1,3 @@
-const data = require('../db/breweries')
+const data = require('../db/breweries');
 
 module.exports = data;

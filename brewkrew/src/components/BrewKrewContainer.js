@@ -1,27 +1,30 @@
 const React = require('react');
-const ErrorBoundary = require('./ErrorBoundary')
+const PropTypes = require('prop-types');
+const ErrorBoundary = require('./ErrorBoundary');
 const HeaderContainer = require('./HeaderContainer');
 const Menu = require('./Menu');
 const Search = require('./Search');
 const Map = require('./Map');
 const AnchorButton = require('./AnchorButton');
-const List = require('./List');
+const PaginationCards = require('./PaginationCards');
 const data = require('../db');
 
 class BrewKrewContainer extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { searchTerm: '', results: [] };
+		this.state = { searchTerm: '', results: [], pageNumber: 0 };
 		this.triggerSearch = this.triggerSearch.bind(this);
 		this.filterMarkers = this.filterMarkers.bind(this);
 		this.filterVisited = this.filterVisited.bind(this);
+		this.setPage = this.setPage.bind(this);
 
 		this.data = data;
+		this.cardListLimit = 10;
 	}
 
 	triggerSearch(term) {
 		let results = (term.startsWith(':')) ? this.executeCommand(term) : this.filterMarkers(term);
-		this.setState({searchTerm: term, results });
+		this.setState({searchTerm: term, results, pageNumber: 0 });
 	}
 
 	executeCommand(rawCommand) {
@@ -39,6 +42,10 @@ class BrewKrewContainer extends React.Component {
 		return this.data.filter((brewery) => {
 			return brewery.visited === visited;
 		});
+	}
+
+	setPage(pageNumber) {
+		this.setState({ pageNumber });
 	}
 
 	render() {
@@ -64,7 +71,7 @@ class BrewKrewContainer extends React.Component {
 							</AnchorButton>
 						</div>
 						<div className='bk-section' id='section2'>
-							<List data={results}/>
+							<PaginationCards limit={this.cardListLimit} breweries={results} pageNumber={this.state.pageNumber} setPage={this.setPage}/>
 						</div>
 					</div>
 				</div>
@@ -72,5 +79,9 @@ class BrewKrewContainer extends React.Component {
 		);
 	}
 }
+
+BrewKrewContainer.propTypes = {
+	google: PropTypes.object
+};
 
 module.exports = BrewKrewContainer;

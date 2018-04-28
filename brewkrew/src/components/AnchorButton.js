@@ -1,5 +1,5 @@
 const React = require('react');
-const ReactDOM = require('react-dom');
+const PropTypes = require('prop-types');
 
 class AnchorButton extends React.PureComponent {
 	constructor(props) {
@@ -12,7 +12,7 @@ class AnchorButton extends React.PureComponent {
 	smoothScroll(evt) {
 		evt.preventDefault();
 		document.getElementById(this.target)
-				.scrollIntoView({behavior: 'smooth'});
+			.scrollIntoView({behavior: 'smooth'});
 
 		this.setState({reverse: !this.state.reverse});
 	}
@@ -35,5 +35,11 @@ class AnchorButton extends React.PureComponent {
 		);
 	}
 }
+
+AnchorButton.propTypes = {
+	targetDown: PropTypes.string.isRequired,
+	targetUp: PropTypes.string.isRequired,
+	children: PropTypes.object
+};
 
 module.exports = AnchorButton;

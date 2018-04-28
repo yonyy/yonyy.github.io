@@ -36,19 +36,22 @@ def read():
 
 
 def getLatAndLong(address):
-	# api-endpoint
-	#URL = 'http://localhost:8080/api/proxy'
 	URL = 'https://maps.googleapis.com/maps/api/geocode/json'
 	API_KEY = ''
 	with open('api-key.json', mode='r') as api:
 		keys = json.load(api)
-		API_KEY = keys['api-key']
+		API_KEY = keys['google']['api-key']
 
 	# defining a params dict for the parameters to be sent to the API
 	PARAMS = {'address': address, 'key': API_KEY, }# 'url': GOOGLE_URL}
 
 	# sending get request and saving the response as response object
-	r = requests.get(url = URL, params = PARAMS)
+	print('Getting coordinates')
+	try:
+		r = requests.get(url = URL, params = PARAMS)
+		r.raise_for_status()
+	except requests.exceptions.RequestException as e:  # This is the correct syntax
+		print('Error from google maps')
 
 	# extracting data in json format
 	data = r.json()
@@ -60,6 +63,33 @@ def getLatAndLong(address):
 	coordinates['lng'] = data['results'][0]['geometry']['location']['lng']
 	return coordinates
 
+
+def yelp(brewery):
+	URL = 'https://api.yelp.com/v3/businesses/search'
+	API_KEY = ''
+	with open('api-key.json', mode='r') as api:
+		keys = json.load(api)
+		API_KEY = keys['yelp']['api-key']
+	
+	PARAMS = {
+		'term': brewery['label'],
+		'location': brewery['address'],
+		'limit': 1
+	}
+
+	HEADERS = {
+		'Authorization': 'Bearer ' + API_KEY
+	}
+
+	print('Getting yelp info')
+	try:
+		r = requests.get(url = URL, params = PARAMS, headers=HEADERS)
+		r.raise_for_status()
+	except requests.exceptions.RequestException as e:  # This is the correct syntax
+		print('Error from yelp')
+
+	data = r.json()
+	return data
 
 def seed():
 	data = []
@@ -74,14 +104,18 @@ def seed():
 			brewery_data['visited'] = row['Done?'] == '1'
 			brewery_data['id'] = index
 			brewery_data['coordinates'] = getLatAndLong(row['Address'])
-			print('Done reading', brewery_data['label'], brewery_data['coordinates'])
+			brewery_data['yelp'] = yelp(brewery_data)
+			print('Done reading', brewery_data['label'])
 			data.append(brewery_data)
 			index += 1
 	
 	print('Done creating data')
 	with open('breweries.json', mode='w') as jsonfile:
 		print('Writing data')
-		json.dump(data, jsonfile, ensure_ascii=False)
+		try:
+			json.dump(data, jsonfile, ensure_ascii=False)
+		except UnicodeEncodeError as e:
+			print(e)
 	
 	print('Done')
 

@@ -1,5 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+const PropTypes = require('prop-types');
 
 const styledMap = require('../stylemap/stylemap');
 
@@ -19,7 +20,7 @@ class Map extends React.Component {
 		const { Map, Marker, StyledMapType } = this.props.google.maps;
 		
 		const styledMapType = new StyledMapType(styledMap, {
-				name: STYLE_NAME
+			name: STYLE_NAME
 		});
 
 		const node = ReactDOM.findDOMNode(this.mapRef);
@@ -32,7 +33,7 @@ class Map extends React.Component {
 			}
 		});
 
-		this.markers = this.props.data.map((brewery, index) => {
+		this.markers = this.props.data.map((brewery) => {
 			let marker = new Marker({
 				position: brewery.coordinates,
 				map: this.map
@@ -55,7 +56,7 @@ class Map extends React.Component {
 
 			marker.setZIndex(1);
 			return marker;
-		}) 
+		});
 
 		this.map.mapTypes.set('styled_map', styledMapType);
 		this.map.setMapTypeId('styled_map');
@@ -82,5 +83,11 @@ class Map extends React.Component {
 		);
 	}
 }
+
+Map.propTypes = {
+	points: PropTypes.array.isRequired,
+	google: PropTypes.object,
+	data: PropTypes.array.isRequired
+};
 
 module.exports = Map;

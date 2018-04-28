@@ -222,6 +222,10 @@
 	.bk-section {
 		position: relative;
 		height: 500px;
+
+		&.bk-section-cards {
+			height: 600px;
+		}
 	}
 }
 
@@ -231,6 +235,108 @@
 
 .bk-reverse {
 	transform: rotate(180deg);
+}
+
+.bk-cards-container {
+	display: flex;
+
+	.bk-cards-row {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		padding: 15px;
+
+		.bk-card-container {
+			width: 20%;
+			height: 200px;
+			margin: 0;
+
+			.bk-card {
+				width: 100%;
+				outline: none;
+				border: none;
+				font-size: 1em;
+				padding: 15px;
+				height: 100%;
+				display: block;
+				background: none;
+
+				&:hover, &:focus, &:active {
+					background-color: $base-hover-color;
+					.bk-icon, p, strong {
+						color: $focus-color;
+					}
+				}
+
+				.bk-card-info {
+					height: 70%;
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					p {
+						margin-top: 0;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				.bk-card-status {
+					height: 30%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+
+				.bk-icon {
+					font-size: 2em;
+				}
+			}
+		}
+	}
+}
+
+.bk-pagination-controls-container {
+	.bk-pagination-controls {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		.bk-control-back {
+			margin-right: 5px;
+		}
+
+		.bk-control-pages {
+			margin: 0px 5px 0px 5px;
+			display: flex;
+    		flex-direction: column;
+    		justify-content: center;
+			height: 40px;
+			
+			span {
+				text-align: center;
+				
+				span {
+					margin: 0px 10px 0px 10px;
+				}
+
+				&.bk-control-page-active {
+					color: $focus-color;
+				}
+			}
+		}
+
+		.bk-control-forward {
+			margin-left: 5px;
+		}
+
+		.bk-control-disabled {
+			color: #2121213b;
+		}
+	}
 }
 
 //@media all and (max-width: 1280px) {}
@@ -289,6 +395,21 @@
 	.bk-nav-list {
 		width: 175px;
 	}
+
+	.bk-cards-container {
+		.bk-cards-row {
+			.bk-card-container {
+				width: 50%;
+				height: 100px;
+	
+				.bk-card {
+					padding: 10px;
+					font-size: 0.5em;
+				}
+			}
+		}
+	}
+		
 }
 
 //@media all and (max-width: 480px) {}

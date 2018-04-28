@@ -1,9 +1,9 @@
 const React = require('react');
-const SearchResultsDropdown = require('./SearchResultsDropdown');
+const PropTypes = require('prop-types');
 
 class Search extends React.PureComponent {
 	constructor(props) {
-		super(props)
+		super(props);
 		this.state = { searchOpen: false };
 		this.toggleSearchField = this.toggleSearchField.bind(this);
 		this._onChange = this._onChange.bind(this);
@@ -24,7 +24,7 @@ class Search extends React.PureComponent {
 		return (
 			<div className='bk-search-container'>
 				<button className='bk-button bk-button-icon'
-				onClick={this.toggleSearchField}>
+					onClick={this.toggleSearchField}>
 					<i className='fas fa-search bk-icon'></i>
 				</button>
 				<input tabIndex={tabIndex} onChange={this._onChange} value={this.props.value}
@@ -34,5 +34,10 @@ class Search extends React.PureComponent {
 		);
 	}
 }
+
+Search.propTypes = {
+	value: PropTypes.string.isRequired,
+	onChange: PropTypes.func.isRequired
+};
 
 module.exports = Search;
