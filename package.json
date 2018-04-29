@@ -13,7 +13,8 @@
     "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-modal": "^3.4.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

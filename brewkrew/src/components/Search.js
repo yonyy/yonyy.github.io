@@ -20,14 +20,15 @@ class Search extends React.PureComponent {
 	render() {
 		let bkSearchClass = 'bk-search-expand-animation' + ((this.state.searchOpen) ? ' bk-search-expanded' : '');
 		let tabIndex = (this.state.searchOpen) ? 0 : -1;
+		let buttonLabel = (this.state.searchOpen) ? 'Expand search input field' : 'Collapse search input field';
 
 		return (
 			<div className='bk-search-container'>
-				<button className='bk-button bk-button-icon'
-					onClick={this.toggleSearchField}>
-					<i className='fas fa-search bk-icon'></i>
+				<button type='button' aria-label={buttonLabel} aria-expanded={this.state.searchOpen} aria-controls='brewerySearch'
+					className='bk-button bk-button-icon' onClick={this.toggleSearchField}>
+					<i aria-hidden='true' className='fas fa-search bk-icon'></i>
 				</button>
-				<input tabIndex={tabIndex} onChange={this._onChange} value={this.props.value}
+				<input id='brewerySearch' tabIndex={tabIndex} onChange={this._onChange} value={this.props.value}
 					className={bkSearchClass} type='text'
 					placeholder=':visited' />
 			</div>

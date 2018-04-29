@@ -16,7 +16,7 @@ class BreweryCard extends React.PureComponent {
 		const { brewery } = this.props;
 		return (
 			<div className='bk-card-container'>
-				<button onClick={this.onClick} className='bk-card'>
+				<button type='button' onClick={this.onClick} className='bk-card'>
 					<div className='bk-card-info'>
 						<p><strong>{brewery.label}</strong></p>
 						<p>{brewery.address}</p>

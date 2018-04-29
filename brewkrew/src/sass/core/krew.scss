@@ -59,7 +59,13 @@
 		.bk-icon {
 			color: $focus-color;
 		}
-	}               
+	}
+	
+	&.bk-button-disabled {
+		.bk-icon {
+			color: $button-disabled-color;
+		}
+	}
 }
 
 .bk-button {
@@ -332,10 +338,6 @@
 		.bk-control-forward {
 			margin-left: 5px;
 		}
-
-		.bk-control-disabled {
-			color: $button-disabled-color;
-		}
 	}
 }
 
@@ -363,15 +365,16 @@
 			.bk-conqueror-img {
 				display: flex;
 				justify-content: center;
-				height: 100px;
-				width: 100px;
+				height: $conqueror-image-size;
+				width: $conqueror-image-size;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				background-color: #cacaca60;
 				border-radius: 50px;
+				overflow: hidden;
 
-				.bk-conqueror-initials{
+				.bk-conqueror-initials {
 					font-size: 1.75em;
 					letter-spacing: 0em;
 				}
@@ -478,7 +481,7 @@
 					height: 50px;
 					width: 50px;
 					border-radius: 25px;
-	
+
 					.bk-conqueror-initials{
 						font-size: 1em;
 						letter-spacing: 0em;

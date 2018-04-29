@@ -21,12 +21,13 @@ class AnchorButton extends React.PureComponent {
 
 		this.target = (this.state.reverse) ? targetUp : targetDown;
 		const reverseClass = (this.state.reverse) ? ' bk-reverse' : '';
+		const label = (this.state.reverse) ? 'Scroll up' : 'Scroll down';
 
 		return (
 			<React.Fragment>
 				<div className='bk-down-link'>
-					<a className='bk-link bk-button-icon' href={'#' + this.target} onClick={this.smoothScroll}>
-						<i className={'fas fa-arrow-down bk-icon bk-transform-reverse' + reverseClass}></i>
+					<a aria-label={label} className='bk-link bk-button-icon' href={'#' + this.target} onClick={this.smoothScroll}>
+						<i aria-hidden='true' className={'fas fa-arrow-down bk-icon bk-transform-reverse' + reverseClass}></i>
 					</a>
 				</div>
 				{ this.props.children }
