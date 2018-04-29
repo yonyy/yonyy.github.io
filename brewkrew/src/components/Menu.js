@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const smoothScroll = require('./util/smoothScroll');
+const { throttle } = require('lodash');
 
 const ESC = 'Escape';
 
@@ -12,6 +13,7 @@ class Menu extends React.PureComponent {
 		this.resetFocus = this.resetFocus.bind(this);
 		this.captureEsc = this.captureEsc.bind(this);
 		this.smoothScroll = this.smoothScroll.bind(this);
+		this.throttleOnClick = throttle(this.toggleNav, 100, { 'trailing' : false });
 	}
 
 	componentDidUpdate() {
@@ -22,12 +24,12 @@ class Menu extends React.PureComponent {
 	}
 
 	addListeners() {
-		document.body.addEventListener('click', this.toggleNav, false);
+		document.body.addEventListener('click',  this.throttleOnClick, false);
 		document.body.addEventListener('keyup', this.captureEsc, false);
 	}
 
 	removeListeners() {
-		document.body.removeEventListener('click', this.toggleNav);
+		document.body.removeEventListener('click', this.throttleOnClick);
 		document.body.removeEventListener('keyup', this.captureEsc);
 	}
 
@@ -56,11 +58,9 @@ class Menu extends React.PureComponent {
 
 	render() {
 		let bkNavClass = 'bk-nav' + ((this.state.navOpen) ? '' : ' bk-nav-hidden');
-		let controlOnClick = (this.state.navOpen) ? null : this.toggleNav;
-
 		return (
 			<div className='bk-nav-container'>
-				<button ref={(node) => { this.navButtonRef = node; }} onClick={controlOnClick} className='bk-button bk-button-icon bk-nav-control'>
+				<button type='button' ref={(node) => { this.navButtonRef = node; }} onClick={this.throttleOnClick} className='bk-button bk-button-icon bk-nav-control'>
 					<i className='bk-icon fas fa-bars bk-icon'></i>
 				</button>
 				<nav className={bkNavClass}>
