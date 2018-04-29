@@ -418,6 +418,12 @@
 		letter-spacing: 0.25em;
 	}
 
+	.bk-sections-container {	
+		.bk-section:nth-child(2) {
+			height: 600px;
+		}
+	}
+
 	.bk-heading-container {
 		.bk-heading {
 			.bk-heading-item {
@@ -449,7 +455,7 @@
 		.bk-cards-row {
 			.bk-card-container {
 				width: 50%;
-				height: 80px;
+				height: 100px;
 	
 				.bk-card {
 					padding: 5px;
