@@ -35,7 +35,7 @@ class BrewKrewContainer extends React.Component {
 
 	filterMarkers(label) {
 		return this.data.filter((brewery) => {
-			return brewery.label.toLowerCase().indexOf(label.toLowerCase()) !== -1;
+			return brewery.label.toLowerCase().startsWith(label.toLowerCase());
 		});
 	}
 
