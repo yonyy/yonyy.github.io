@@ -29,8 +29,15 @@ class BrewKrewContainer extends React.Component {
 	}
 
 	executeCommand(rawCommand) {
-		const command = rawCommand.substring(1);
-		return this.filterVisited((command.toLowerCase() === 'visited'));
+		const command = rawCommand.substring(1).toLowerCase();
+		switch (command) {
+		case 'visited':
+			return this.filterVisited(true);
+		case '!visited':
+			return this.filterVisited(false);
+		default:
+			return this.filterMarkers(rawCommand);
+		}
 	}
 
 	filterMarkers(label) {

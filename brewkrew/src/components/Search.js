@@ -20,7 +20,7 @@ class Search extends React.PureComponent {
 	render() {
 		let bkSearchClass = 'bk-search-expand-animation' + ((this.state.searchOpen) ? ' bk-search-expanded' : '');
 		let tabIndex = (this.state.searchOpen) ? 0 : -1;
-		let buttonLabel = (this.state.searchOpen) ? 'Expand search input field' : 'Collapse search input field';
+		let buttonLabel = (this.state.searchOpen) ? 'Collapse search input field': 'Expand search input field';
 
 		return (
 			<div className='bk-search-container'>
