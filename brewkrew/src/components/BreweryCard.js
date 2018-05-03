@@ -28,8 +28,7 @@ class BreweryCard extends React.PureComponent {
 						<p><strong>{brewery.label}</strong></p>
 						<p>{brewery.address}</p>
 						{brewery.distance && <p>{precisionRound(brewery.distance, 2)} miles</p>}
-						<p>{rating ? <React.Fragment>{rating} <i className='fas fa-star bk-icon'></i> </React.Fragment>: 'No rating available'}</p>
-						{reviewCount ? <p>{reviewCount} Reviews</p> : null}
+						<p>{rating && reviewCount? <React.Fragment>{rating} <i className='fas fa-star bk-icon'></i> {reviewCount} Reviews</React.Fragment>: 'No rating available'}</p>
 					</div>
 					<div className='bk-card-status'>
 						{(brewery.visited) ? <i className="fas fa-check bk-icon"></i> : null}
