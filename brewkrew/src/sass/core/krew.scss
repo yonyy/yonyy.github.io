@@ -490,6 +490,12 @@
 				.bk-card {
 					padding: 5px;
 					font-size: 0.5em;
+
+					.bk-card-info {
+						p {
+							margin-bottom: 1px;
+						}
+					}
 				}
 			}
 		}
