@@ -19,6 +19,8 @@ class BreweryCard extends React.PureComponent {
 
 	render() {
 		const { brewery } = this.props;
+		const rating = brewery.yelp.businesses.length ? brewery.yelp.businesses[0].rating : null;
+		const reviewCount = brewery.yelp.businesses.length ? brewery.yelp.businesses[0].review_count : null;
 		return (
 			<div className='bk-card-container'>
 				<button type='button' onClick={this.onClick} className='bk-card'>
@@ -26,6 +28,8 @@ class BreweryCard extends React.PureComponent {
 						<p><strong>{brewery.label}</strong></p>
 						<p>{brewery.address}</p>
 						{brewery.distance && <p>{precisionRound(brewery.distance, 2)} miles</p>}
+						<p>{rating ? <React.Fragment>{rating} <i className='fas fa-star bk-icon'></i> </React.Fragment>: 'No rating available'}</p>
+						{reviewCount ? <p>{reviewCount} Reviews</p> : null}
 					</div>
 					<div className='bk-card-status'>
 						{(brewery.visited) ? <i className="fas fa-check bk-icon"></i> : null}

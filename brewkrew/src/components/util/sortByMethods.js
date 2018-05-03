@@ -43,9 +43,39 @@ async function sortByDistance(breweries) {
 }
 
 function sortByRating(breweries) {
-	return _.sortBy(breweries, (brewery) => {
-		return (brewery.yelp.businesses.length) ? brewery.yelp.businesses[0].rating : -1;
-	});
+	return _.chain(breweries)
+		.sortBy((brewery) => {
+			return (brewery.yelp.businesses.length) ? brewery.yelp.businesses[0].rating : -1;
+		})
+		.reverse()
+		.reduce((acc, brewery) => {
+			const rating = (brewery.yelp.businesses.length) ? brewery.yelp.businesses[0].rating : -1;
+			const tail = acc[acc.length - 1];
+			if (!tail.length)
+				tail.push(brewery);
+			else {
+				const tailBrewery = tail[0];
+				const groupRating = (tailBrewery.yelp.businesses.length) ? tailBrewery.yelp.businesses[0].rating : -1;
+				if (groupRating === rating)
+					tail.push(brewery);
+				else
+					acc.push([]);
+			}
+
+			return acc;
+		}, [[]])
+		.map((group) => {
+			return _.chain(group)
+				.sortBy((brewery) => {
+					return (brewery.yelp.businesses.length) ? brewery.yelp.businesses[0].review_count : -1;
+				})
+				.reverse()
+				.value();
+		})
+		.reduce((acc, group) => {
+			return acc.concat(group);
+		}, [])
+		.value();
 }
 
 module.exports = {

@@ -26,9 +26,11 @@ class PaginationCards extends React.Component {
 		this.state = {
 			pageNumber: 0,
 			id,
-			sortByMethod: sortByAZ,
-			loading: false
+			sortByMethod: sortByDistance,
+			loading: true
 		};
+
+		this.computeAsyncDistance();
 	}
 
 	static generateID(arr) {

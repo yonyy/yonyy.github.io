@@ -261,7 +261,7 @@
 				outline: none;
 				border: none;
 				font-size: 1em;
-				padding: 15px;
+				padding: 10px;
 				height: 100%;
 				display: block;
 				background: none;
@@ -275,7 +275,7 @@
 				}
 
 				.bk-card-info {
-					height: 70%;
+					height: 80%;
 					text-align: center;
 					display: flex;
 					flex-direction: column;
@@ -283,22 +283,26 @@
 
 					p {
 						margin-top: 0;
-
+						margin-bottom: 5px;
 						&:last-child {
 							margin-bottom: 0;
 						}
 					}
+
+					.bk-icon {
+						font-size: inherit;
+					}
 				}
 
 				.bk-card-status {
-					height: 30%;
+					height: 20%;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
-				}
 
-				.bk-icon {
-					font-size: 2em;
+					.bk-icon {
+						font-size: 2em;
+					}
 				}
 			}
 		}
@@ -440,7 +444,7 @@
 	}
 
 	a, p {
-		letter-spacing: 0.25em;
+		letter-spacing: 0.15em;
 	}
 
 	.bk-sections-container {	
