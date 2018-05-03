@@ -1,6 +1,11 @@
 const React = require('react');
 const PropTypes = require('prop-types');
 
+function precisionRound(number, precision) {
+	const factor = Math.pow(10, precision);
+	return Math.round(number * factor) / factor;
+}
+
 class BreweryCard extends React.PureComponent {
 	constructor(props) {
 		super(props);
@@ -20,6 +25,7 @@ class BreweryCard extends React.PureComponent {
 					<div className='bk-card-info'>
 						<p><strong>{brewery.label}</strong></p>
 						<p>{brewery.address}</p>
+						{brewery.distance && <p>{precisionRound(brewery.distance, 2)} miles</p>}
 					</div>
 					<div className='bk-card-status'>
 						{(brewery.visited) ? <i className="fas fa-check bk-icon"></i> : null}

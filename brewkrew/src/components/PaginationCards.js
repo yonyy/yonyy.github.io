@@ -1,33 +1,10 @@
 const React = require('react');
 const PropTypes = require('prop-types');
 const BreweryCards = require('./BreweryCards');
-
-const PageNumbers = ({ pageNumber, pagesTotal }) => {
-	const maxShow = 5;
-	const floor = Math.floor(pageNumber / maxShow);
-	const ceil = (maxShow * floor + maxShow < pagesTotal) ? maxShow * floor + maxShow : pagesTotal;
-	let range = [];
-	for (let number = maxShow * floor + 1; number <= ceil; number++) {
-		range.push(number);
-	}
-
-	return (
-		<span>
-			{
-				range.map((number) => {
-					if (number - 1 === pageNumber)
-						return <span aria-label={`Current page number ${number}`} aria-current='true' className='bk-control-page-active' key={number}>{number}</span>;
-					return <span aria-label={`Page number ${number}`} key={number}>{number}</span>;
-				})
-			}
-		</span>
-	);
-};
-
-PageNumbers.propTypes = {
-	pageNumber: PropTypes.number.isRequired,
-	pagesTotal: PropTypes.number.isRequired
-};
+const SortBy = require('./SortBy');
+const Pagination = require('./Pagination');
+const Loading = require('./Loading');
+const { sortByAZ, sortByZA, sortByDistance, sortByRating } = require('./util/sortByMethods');
 
 class PaginationCards extends React.Component {
 	constructor(props) {
@@ -35,12 +12,79 @@ class PaginationCards extends React.Component {
 		this.sliceCards = this.sliceCards.bind(this);
 		this.backPage = this.backPage.bind(this);
 		this.nextPage = this.nextPage.bind(this);
+		this.setSortMethod = this.setSortMethod.bind(this);
 
-		this.slices = this.sliceCards();
+		this.slices = this.sliceCards(this.props.breweries);
+		this.sortByMethods = {
+			'aZ' : PaginationCards.sortByAZ,
+			'zA' : PaginationCards.sortByZA,
+			'distance' : PaginationCards.sortByDistance,
+			'rating' : PaginationCards.sortByRating
+		};
+
+		const id = PaginationCards.generateID(this.props.breweries);
+		this.state = {
+			pageNumber: 0,
+			id,
+			sortByMethod: sortByAZ,
+			loading: false
+		};
 	}
 
-	sliceCards() {
-		return this.props.breweries.reduce((acc, curr, index) => {
+	static generateID(arr) {
+		return arr.reduce((acc, el) => {
+			return acc + el.label;
+		}, '');
+	}
+
+	static getDerivedStateFromProps(nextProps, prevState) {
+		var nextID = PaginationCards.generateID(nextProps.breweries);
+		if (nextID !== prevState.id) {
+			return {
+				pageNumber: 0,
+				id: PaginationCards.generateID(nextProps.breweries),
+				loading: prevState.sortByMethod === sortByDistance
+			};
+		}
+
+		return null;
+	}
+
+	componentDidUpdate() {
+		if (this.state.loading) {
+			this.slices = [[]];
+			this.computeAsyncDistance();
+		}
+	}
+
+	static mapFuncToString(func) {
+		switch(func) {
+		case sortByAZ:
+			return 'aZ';
+		case sortByZA:
+			return 'zA';
+		case sortByDistance:
+			return 'distance';
+		case sortByRating:
+			return 'rating';
+		}
+	}
+
+	static mapStringToFunc(key) {
+		switch(key) {
+		case 'aZ':
+			return sortByAZ;
+		case 'zA':
+			return sortByZA;
+		case 'distance':
+			return sortByDistance;
+		case 'rating':
+			return sortByRating;
+		}
+	}
+
+	sliceCards(arr) {
+		return arr.reduce((acc, curr, index) => {
 			if (index !== 0 && index % this.props.limit === 0)
 				acc.push([]);
 			acc[acc.length - 1].push(curr);
@@ -48,52 +92,57 @@ class PaginationCards extends React.Component {
 		}, [[]]);
 	}
 
+	setPage(pageNumber) {
+		this.setState({ pageNumber });
+	}
+
 	backPage() {
-		if (this.props.pageNumber - 1 >= 0)
-			this.props.setPage(this.props.pageNumber - 1);
+		if (this.state.pageNumber - 1 >= 0)
+			this.setPage(this.state.pageNumber - 1);
 	}
 
 	nextPage() {
-		if (this.props.pageNumber + 1 < this.slices.length)
-			this.props.setPage(this.props.pageNumber + 1);
+		if (this.state.pageNumber + 1 < this.slices.length)
+			this.setPage(this.state.pageNumber + 1);
+	}
+
+	computeAsyncDistance() {
+		sortByDistance(this.props.breweries).then(b => {
+			this.slices = this.sliceCards(b);
+			this.setState({ loading: false });
+		});
+	}
+
+	setSortMethod(method) {
+		if (method === this.state.sortByMethod)
+			return;
+
+		const sortByMethod = PaginationCards.mapStringToFunc(method);
+		const loading = (sortByMethod === sortByDistance);
+
+		if (loading)
+			this.computeAsyncDistance();
+
+		this.setState({
+			sortByMethod,
+			loading
+		});
 	}
 
 	render() {
-		const isDisabled = (back) => {
-			return (back && this.props.pageNumber === 0) || (!back && this.props.pageNumber === this.slices.length - 1);
-		};
+		const active = PaginationCards.mapFuncToString(this.state.sortByMethod);
+		if (this.state.sortByMethod !== sortByDistance)
+			this.slices = this.sliceCards(this.state.sortByMethod(this.props.breweries));
+		
+		const page = this.slices[this.state.pageNumber];
 
-		const getClassName = (baseClass, back) => {
-			if (isDisabled(back))
-				return `${baseClass} bk-button-disabled`;
-			return baseClass;
-		};
-
-		this.slices = this.sliceCards();
-		const page = this.slices[this.props.pageNumber];
-	
 		return (
 			<React.Fragment>
-				<BreweryCards breweries={page} />
-				<div className='bk-pagination-controls-container'>
-					<div className='bk-pagination-controls'>
-						<div className='bk-control-back'>
-							<button type='button' aria-label='Previous page' aria-disabled={isDisabled(true)}
-								className={getClassName('bk-button bk-button-icon', true)} onClick={this.backPage}>
-								<i aria-hidden='true' className='fas fa-chevron-left bk-icon'></i>
-							</button>
-						</div>
-						<div className='bk-control-pages'>
-							<PageNumbers pageNumber={this.props.pageNumber} pagesTotal={this.slices.length} />
-						</div>
-						<div className='bk-control-forward'>
-							<button type='button' aria-label='Next page' aria-disabled={isDisabled(false)}
-								className={getClassName('bk-button bk-button-icon', false)} onClick={this.nextPage}>
-								<i className='fas fa-chevron-right bk-icon'></i>
-							</button>
-						</div>
-					</div>
-				</div>
+				<SortBy onSelect={this.setSortMethod} active={active}/>
+				<Loading loading={this.state.loading}>
+					<BreweryCards breweries={page} />
+					<Pagination pageNumber={this.state.pageNumber} length={this.slices.length} backPage={this.backPage} nextPage={this.nextPage} />
+				</Loading>
 			</React.Fragment>
 		);
 	}
@@ -106,9 +155,7 @@ PaginationCards.propTypes = {
 		visited: PropTypes.bool.isRequired,
 		yelp: PropTypes.object.isRequired
 	})),
-	limit: PropTypes.number.isRequired,
-	setPage: PropTypes.func.isRequired,
-	pageNumber: PropTypes.number.isRequired
+	limit: PropTypes.number.isRequired
 };
 
 module.exports = PaginationCards;

@@ -62,9 +62,7 @@ gulp.task('build-prod', function() {
 		}))
 		.pipe(source('build.js'))
 		.pipe(buffer())
-		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(uglify())
-		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./brewkrew/dest'));
 });
 

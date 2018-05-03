@@ -13,11 +13,10 @@ const data = require('../db');
 class BrewKrewContainer extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { searchTerm: '', results: [], pageNumber: 0 };
+		this.state = { searchTerm: '', results: [] };
 		this.triggerSearch = this.triggerSearch.bind(this);
 		this.filterMarkers = this.filterMarkers.bind(this);
 		this.filterVisited = this.filterVisited.bind(this);
-		this.setPage = this.setPage.bind(this);
 
 		this.data = data;
 		this.cardListLimit = 10;
@@ -25,7 +24,7 @@ class BrewKrewContainer extends React.Component {
 
 	triggerSearch(term) {
 		let results = (term.startsWith(':')) ? this.executeCommand(term) : this.filterMarkers(term);
-		this.setState({searchTerm: term, results, pageNumber: 0 });
+		this.setState({searchTerm: term, results});
 	}
 
 	executeCommand(rawCommand) {
@@ -50,10 +49,6 @@ class BrewKrewContainer extends React.Component {
 		return this.data.filter((brewery) => {
 			return brewery.visited === visited;
 		});
-	}
-
-	setPage(pageNumber) {
-		this.setState({ pageNumber });
 	}
 
 	render() {

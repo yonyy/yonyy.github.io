@@ -38,7 +38,7 @@ Conqueror.propTypes = {
 	conqueror: PropTypes.object.isRequired
 };
 
-class Conquerors extends React.Component {
+class Conquerors extends React.PureComponent {
 	constructor(props) {
 		super(props);
 	}
