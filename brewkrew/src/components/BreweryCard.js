@@ -19,11 +19,14 @@ class BreweryCard extends React.PureComponent {
 
 	render() {
 		const { brewery } = this.props;
-		const rating = brewery.yelp.businesses.length ? brewery.yelp.businesses[0].rating : null;
-		const reviewCount = brewery.yelp.businesses.length ? brewery.yelp.businesses[0].review_count : null;
+		const hasYelp = brewery.yelp.businesses.length !== 0;
+		const rating = hasYelp ? brewery.yelp.businesses[0].rating : null;
+		const reviewCount = hasYelp ? brewery.yelp.businesses[0].review_count : null;
+		const href = hasYelp ? brewery.yelp.businesses[0].url : 'javascript:void(0)';
+
 		return (
 			<div className='bk-card-container'>
-				<button type='button' onClick={this.onClick} className='bk-card'>
+				<a target='_blank' href={href} onClick={this.onClick} className='bk-card'>
 					<div className='bk-card-info'>
 						<p><strong>{brewery.label}</strong></p>
 						<p>{brewery.address}</p>
@@ -33,7 +36,7 @@ class BreweryCard extends React.PureComponent {
 					<div className='bk-card-status'>
 						{(brewery.visited) ? <i className="fas fa-check bk-icon"></i> : null}
 					</div>
-				</button>
+				</a>
 			</div>
 		);
 	}

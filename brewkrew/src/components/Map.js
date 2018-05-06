@@ -43,6 +43,7 @@ class Map extends React.Component {
 				marker.setLabel({
 					fontFamily: FONT_FAMILY,
 					fontWeight: FONT_WEIGHT,
+					fontSize: '18px',
 					text: brewery.label
 				});
 

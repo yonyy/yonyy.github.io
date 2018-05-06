@@ -81,7 +81,6 @@
 }
 
 .bk-link {
-	text-decoration: none;
 	color: $base-color;
 	cursor: pointer;
 
@@ -266,6 +265,8 @@
 				display: block;
 				background: none;
 				cursor: pointer;
+				box-sizing: border-box;
+				text-align: center;
 
 				&:hover, &:focus, &:active {
 					background-color: $base-hover-color;
@@ -276,7 +277,6 @@
 
 				.bk-card-info {
 					height: 80%;
-					text-align: center;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
@@ -525,6 +525,10 @@
 			.bk-conqueror-name {
 				text-align: center;
 				font-size: 0.75em;
+				
+				p {
+					letter-spacing: 0.25em;
+				}
 			}
 		}
 	}
