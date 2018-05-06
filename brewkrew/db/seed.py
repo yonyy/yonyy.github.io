@@ -17,8 +17,12 @@ def read():
 		creds = tools.run_flow(flow, store)
 	service = build('sheets', 'v4', http=creds.authorize(Http()))
 
+	SPREADSHEET_ID = ''
 	# Call the Sheets API
-	SPREADSHEET_ID = '1KifH9vfGuv99b_5Ksr3nEQQM1MFNt2A4d0-_snmPUMA'
+	with open('api-key.json', mode='r') as api:
+		keys = json.load(api)
+		SPREADSHEET_ID = keys['google']['spreadsheet-id']
+	
 	RANGE_NAME = 'Data!A1:C152'
 	result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,range=RANGE_NAME).execute()
 
@@ -43,14 +47,14 @@ def getLatAndLong(address):
 		API_KEY = keys['google']['api-key']
 
 	# defining a params dict for the parameters to be sent to the API
-	PARAMS = {'address': address, 'key': API_KEY, }# 'url': GOOGLE_URL}
+	PARAMS = {'address': address, 'key': API_KEY, }
 
 	# sending get request and saving the response as response object
 	print('Getting coordinates')
 	try:
 		r = requests.get(url = URL, params = PARAMS)
 		r.raise_for_status()
-	except requests.exceptions.RequestException as e:  # This is the correct syntax
+	except requests.exceptions.RequestException as e:
 		print('Error from google maps')
 
 	# extracting data in json format

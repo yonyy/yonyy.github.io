@@ -1,19 +1,10 @@
 const React = require('react');
 const PropTypes = require('prop-types');
 const BreweryCard = require('./BreweryCard');
-const Yelp = require('./Yelp');
 
 class BreweryCards extends React.Component {
 	constructor(props) {
 		super(props);
-
-		this.state = { activeCard: null };
-
-		this.onClick = this.onClick.bind(this);
-	}
-
-	onClick({ yelp }) {
-		this.setState({ activeCard: yelp });
 	}
 
 	render() {
@@ -22,11 +13,10 @@ class BreweryCards extends React.Component {
 				<div className='bk-cards-row'>
 					{
 						this.props.breweries.map((brewery) => {
-							return <BreweryCard onClick={this.onClick} brewery={brewery} key={brewery.id} />;
+							return <BreweryCard brewery={brewery} key={brewery.id} />;
 						})
 					}
 				</div>
-				<Yelp card={this.state.activeCard}/>
 			</div>
 		);
 	}

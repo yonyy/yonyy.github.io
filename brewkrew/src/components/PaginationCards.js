@@ -121,10 +121,6 @@ class PaginationCards extends React.Component {
 
 		const sortByMethod = PaginationCards.mapStringToFunc(method);
 		const loading = (sortByMethod === sortByDistance);
-
-		if (loading)
-			this.computeAsyncDistance();
-
 		this.setState({
 			sortByMethod,
 			loading
@@ -135,7 +131,7 @@ class PaginationCards extends React.Component {
 		const active = PaginationCards.mapFuncToString(this.state.sortByMethod);
 		if (this.state.sortByMethod !== sortByDistance)
 			this.slices = this.sliceCards(this.state.sortByMethod(this.props.breweries));
-		
+
 		const page = this.slices[this.state.pageNumber];
 
 		return (
