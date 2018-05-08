@@ -8,6 +8,7 @@ class GoogleMarkers {
 
 	constructor(breweries, map) {
 		this.markers = this.setMarkers(breweries, map);
+		this.activeMarker = null;
 	}
 
 	setMarkers(breweries, map) {
@@ -15,42 +16,25 @@ class GoogleMarkers {
 		return breweries.map((brewery, index) => {
 			const marker = new GoogleMarkers.Maps.Marker({
 				position: brewery.coordinates,
-				animation: GoogleMarkers.Maps.Animation.DROP
+				animation: GoogleMarkers.Maps.Animation.DROP,
 			});
 
 			marker.addListener('click', function() {
-				if (marker.getLabel() !== '')
+				if (gM.activeMarker === marker)
 					return;
 
-				gM.clearLabels();
-				gM.setMarkerAnimation(marker);
-				marker.setLabel({
-					fontFamily: FONT_FAMILY,
-					fontWeight: FONT_WEIGHT,
-					fontSize: '16px',
-					color: '#212121',
-					text: brewery.label
-				});
-
-				marker.setZIndex(100);
+				gM.clearMarker(gM.activeMarker);
+				gM.showMarker(marker, brewery.label);
+				gM.activeMarker = marker;
 			});
 
 			marker.addListener('mouseover', function() {
-				gM.setMarkerAnimation(marker);
-				marker.setLabel({
-					fontFamily: FONT_FAMILY,
-					fontWeight: FONT_WEIGHT,
-					fontSize: '18px',
-					text: brewery.label
-				});
-
-				marker.setZIndex(100);
+				gM.showMarker(marker, brewery.label);
+				gM.activeMarker = marker;
 			});
 
 			marker.addListener('mouseout', function() {
-				gM.clearMarkerAnimation(marker);
-				marker.setLabel('');
-				marker.setZIndex(1);
+				gM.clearMarker(marker);
 			});
 
 			marker.setZIndex(1);
@@ -63,24 +47,27 @@ class GoogleMarkers {
 		});
 	}
 
-	clearLabels() {
-		this.markers.map((marker) => {
-			marker.setLabel('');
-			marker.setZIndex(1);
-		});
-	}
-
-	setMarkerAnimation(marker) {
-		if (marker.getAnimation() !== null)
+	showMarker(marker, label) {
+		if (!marker)
 			return;
-		
+
 		marker.setAnimation(GoogleMarkers.Maps.Animation.BOUNCE);
+		marker.setLabel({
+			fontFamily: FONT_FAMILY,
+			fontWeight: FONT_WEIGHT,
+			fontSize: '18px',
+			text: label
+		});
+		marker.setZIndex(100);
 	}
 
-	clearMarkerAnimation(marker) {
-		if (marker.getAnimation() === null)
-			return;	
+	clearMarker(marker) {
+		if (!marker)
+			return;
+
 		marker.setAnimation(null);
+		marker.setLabel('');
+		marker.setZIndex(1);
 	}
 }
 
