@@ -70,7 +70,7 @@ class BrewKrewContainer extends React.Component {
 					<div className='bk-sections-container'>
 						<div className='bk-section'>
 							<AnchorButton targetUp='map' targetDown='cards'>
-								<Map google={this.props.google} data={data} points={results} />
+								<Map google={this.props.google} data={data} points={results} doubleClick={this.triggerSearch}/>
 							</AnchorButton>
 						</div>
 						<div className='bk-section' id='cards'>

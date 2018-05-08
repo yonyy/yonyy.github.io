@@ -10,8 +10,11 @@ const CENTER_LAT_LONG = {lat: 32.8806222, lng: -117.1652732};
 class Map extends React.Component {
 	constructor(props) {
 		super(props);
-		GoogleMarkers.setGoogleMapsClass(this.props.google.maps);
 		this.filterOutData = this.filterOutData.bind(this);
+		this.doubleClick = this.doubleClick.bind(this);
+		GoogleMarkers.setGoogleMapsClass(this.props.google.maps);
+		GoogleMarkers.setDoubleClick(this.doubleClick);
+		
 	}
 
 	componentDidMount() {
@@ -43,12 +46,11 @@ class Map extends React.Component {
 	filterOutData() {
 		const points = this.props.points;
 		const indices = points.map(p => p.id);
-		this.markers.map((m, index) => {
-			if (indices.indexOf(index) === -1)
-				m.setMap(null);
-			else if (m.getMap() === null)
-				m.setMap(this.map);
-		});
+		this.markers.filterOutByIndices(indices);
+	}
+
+	doubleClick(brewery) {
+		this.props.doubleClick(brewery.label);
 	}
 
 	render() {

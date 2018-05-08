@@ -6,9 +6,14 @@ class GoogleMarkers {
 		GoogleMarkers.Maps = Maps;
 	}
 
+	static setDoubleClick(func) {
+		GoogleMarkers.doubleClick = func;
+	}
+
 	constructor(breweries, map) {
 		this.markers = this.setMarkers(breweries, map);
 		this.activeMarker = null;
+		this.map = map;
 	}
 
 	setMarkers(breweries, map) {
@@ -16,12 +21,14 @@ class GoogleMarkers {
 		return breweries.map((brewery, index) => {
 			const marker = new GoogleMarkers.Maps.Marker({
 				position: brewery.coordinates,
-				animation: GoogleMarkers.Maps.Animation.DROP,
+				animation: GoogleMarkers.Maps.Animation.DROP
 			});
 
 			marker.addListener('click', function() {
-				if (gM.activeMarker === marker)
+				if (gM.activeMarker === marker) {
+					GoogleMarkers.doubleClick && GoogleMarkers.doubleClick(brewery);
 					return;
+				}
 
 				gM.clearMarker(gM.activeMarker);
 				gM.showMarker(marker, brewery.label);
@@ -41,7 +48,7 @@ class GoogleMarkers {
 
 			setTimeout(() => {
 				marker.setMap(map);
-			}, index * 100);
+			}, index * 50);
 
 			return marker;
 		});
@@ -68,6 +75,15 @@ class GoogleMarkers {
 		marker.setAnimation(null);
 		marker.setLabel('');
 		marker.setZIndex(1);
+	}
+
+	filterOutByIndices(indices) {
+		this.markers.map((m, index) => {
+			if (indices.indexOf(index) === -1)
+				m.setMap(null);
+			else if (m.getMap() === null)
+				m.setMap(this.map);
+		});
 	}
 }
 
