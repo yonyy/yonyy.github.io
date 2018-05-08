@@ -1,23 +1,21 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const PropTypes = require('prop-types');
-
+const GoogleMarkers = require('./util/GoogleMarkers');
 const styledMap = require('../stylemap/stylemap');
 
-const FONT_FAMILY = 'Lato, sans-serif';
-const FONT_WEIGHT = 'bold';
 const STYLE_NAME = 'Brew Style';
 const CENTER_LAT_LONG = {lat: 32.8806222, lng: -117.1652732};
 
 class Map extends React.Component {
 	constructor(props) {
 		super(props);
-
+		GoogleMarkers.setGoogleMapsClass(this.props.google.maps);
 		this.filterOutData = this.filterOutData.bind(this);
 	}
 
 	componentDidMount() {
-		const { Map, Marker, StyledMapType } = this.props.google.maps;
+		const { Map, StyledMapType } = this.props.google.maps;
 		
 		const styledMapType = new StyledMapType(styledMap, {
 			name: STYLE_NAME
@@ -33,32 +31,7 @@ class Map extends React.Component {
 			}
 		});
 
-		this.markers = this.props.data.map((brewery) => {
-			let marker = new Marker({
-				position: brewery.coordinates,
-				map: this.map
-			});
-
-			marker.addListener('mouseover', function() {
-				marker.setLabel({
-					fontFamily: FONT_FAMILY,
-					fontWeight: FONT_WEIGHT,
-					fontSize: '18px',
-					text: brewery.label
-				});
-
-				marker.setZIndex(100);
-			});
-
-			marker.addListener('mouseout', function() {
-				marker.setLabel('');
-				marker.setZIndex(1);
-			});
-
-			marker.setZIndex(1);
-			return marker;
-		});
-
+		this.markers = new GoogleMarkers(this.props.data, this.map);
 		this.map.mapTypes.set('styled_map', styledMapType);
 		this.map.setMapTypeId('styled_map');
 	}
