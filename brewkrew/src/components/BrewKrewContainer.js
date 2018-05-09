@@ -5,7 +5,7 @@ const HeaderContainer = require('./HeaderContainer');
 const Menu = require('./Menu');
 const Search = require('./Search');
 const Map = require('./Map');
-const AnchorButton = require('./AnchorButton');
+const MapOverlayButtons = require('./MapOverlayButtons');
 const PaginationCards = require('./PaginationCards');
 const Conquerors = require('./Conquerors');
 const data = require('../db');
@@ -69,9 +69,9 @@ class BrewKrewContainer extends React.Component {
 					</HeaderContainer>
 					<div className='bk-sections-container'>
 						<div className='bk-section'>
-							<AnchorButton targetUp='map' targetDown='cards'>
+							<MapOverlayButtons resetSearch={() => this.triggerSearch('')}>
 								<Map google={this.props.google} data={data} points={results} doubleClick={this.triggerSearch}/>
-							</AnchorButton>
+							</MapOverlayButtons>
 						</div>
 						<div className='bk-section' id='cards'>
 							<PaginationCards limit={this.cardListLimit} breweries={results} pageNumber={this.state.pageNumber} setPage={this.setPage}/>

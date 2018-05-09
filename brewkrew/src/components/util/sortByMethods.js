@@ -59,7 +59,7 @@ function sortByRating(breweries) {
 				if (groupRating === rating)
 					tail.push(brewery);
 				else
-					acc.push([]);
+					acc.push([brewery]);
 			}
 
 			return acc;
