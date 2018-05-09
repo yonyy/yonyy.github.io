@@ -32,7 +32,7 @@ class BrewKrewContainer extends React.Component {
 		switch (command) {
 		case 'visited':
 			return this.filterVisited(true);
-		case '!visited':
+		case 'notvisited':
 			return this.filterVisited(false);
 		default:
 			return this.filterMarkers(rawCommand);
