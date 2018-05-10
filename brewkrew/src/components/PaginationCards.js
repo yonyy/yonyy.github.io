@@ -98,7 +98,7 @@ class PaginationCards extends React.Component {
 	}
 
 	nextPage() {
-		if (this.state.pageNumber + 1 < this.slices.length)
+		if (this.state.pageNumber + 1 < this.state.slices.length)
 			this.setPage(this.state.pageNumber + 1);
 	}
 
