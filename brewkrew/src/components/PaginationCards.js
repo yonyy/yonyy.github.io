@@ -13,24 +13,18 @@ class PaginationCards extends React.Component {
 		this.backPage = this.backPage.bind(this);
 		this.nextPage = this.nextPage.bind(this);
 		this.setSortMethod = this.setSortMethod.bind(this);
-
-		this.slices = this.sliceCards(this.props.breweries);
-		this.sortByMethods = {
-			'aZ' : PaginationCards.sortByAZ,
-			'zA' : PaginationCards.sortByZA,
-			'distance' : PaginationCards.sortByDistance,
-			'rating' : PaginationCards.sortByRating
-		};
+		this.sort = this.sort.bind(this);
 
 		const id = PaginationCards.generateID(this.props.breweries);
 		this.state = {
 			pageNumber: 0,
 			id,
 			sortByMethod: sortByDistance,
-			loading: true
+			loading: true,
+			slices: [[]]
 		};
 
-		this.computeAsyncDistance();
+		this.sort();
 	}
 
 	static generateID(arr) {
@@ -45,7 +39,8 @@ class PaginationCards extends React.Component {
 			return {
 				pageNumber: 0,
 				id: PaginationCards.generateID(nextProps.breweries),
-				loading: prevState.sortByMethod === sortByDistance
+				loading: true,
+				slices: [[]]
 			};
 		}
 
@@ -54,8 +49,7 @@ class PaginationCards extends React.Component {
 
 	componentDidUpdate() {
 		if (this.state.loading) {
-			this.slices = [[]];
-			this.computeAsyncDistance();
+			this.sort();
 		}
 	}
 
@@ -108,11 +102,18 @@ class PaginationCards extends React.Component {
 			this.setPage(this.state.pageNumber + 1);
 	}
 
-	computeAsyncDistance() {
-		sortByDistance(this.props.breweries).then(b => {
-			this.slices = this.sliceCards(b);
-			this.setState({ loading: false });
-		});
+	sort() {
+		const { breweries } = this.props;
+		if (this.state.sortByMethod === sortByDistance) {
+			this.state.sortByMethod(breweries).then(b => {
+				const slices = this.sliceCards(b);
+				this.setState({ loading: false, slices });
+			});
+		} else {
+			const sorted = this.state.sortByMethod(breweries);
+			const slices = this.sliceCards(sorted);
+			this.setState({ loading: false, slices });
+		}
 	}
 
 	setSortMethod(method) {
@@ -120,26 +121,23 @@ class PaginationCards extends React.Component {
 			return;
 
 		const sortByMethod = PaginationCards.mapStringToFunc(method);
-		const loading = (sortByMethod === sortByDistance);
 		this.setState({
 			sortByMethod,
-			loading
+			loading: true,
+			slices: [[]]
 		});
 	}
 
 	render() {
 		const active = PaginationCards.mapFuncToString(this.state.sortByMethod);
-		if (this.state.sortByMethod !== sortByDistance)
-			this.slices = this.sliceCards(this.state.sortByMethod(this.props.breweries));
-
-		const page = this.slices[this.state.pageNumber];
-
+		const page = this.state.slices[this.state.pageNumber];
+		const length = this.state.slices.length;
 		return (
 			<React.Fragment>
 				<SortBy onSelect={this.setSortMethod} active={active}/>
 				<Loading loading={this.state.loading}>
 					<BreweryCards breweries={page} />
-					<Pagination pageNumber={this.state.pageNumber} length={this.slices.length} backPage={this.backPage} nextPage={this.nextPage} />
+					<Pagination pageNumber={this.state.pageNumber} length={length} backPage={this.backPage} nextPage={this.nextPage} />
 				</Loading>
 			</React.Fragment>
 		);

@@ -74,7 +74,7 @@ class BrewKrewContainer extends React.Component {
 							</MapOverlayButtons>
 						</div>
 						<div className='bk-section' id='cards'>
-							<PaginationCards limit={this.cardListLimit} breweries={results} pageNumber={this.state.pageNumber} setPage={this.setPage}/>
+							<PaginationCards limit={this.cardListLimit} breweries={results} />
 						</div>
 						<div className='bk-section' id='conquerors'>
 							<Conquerors />
