@@ -66,7 +66,7 @@ gulp.task('build-prod', function() {
 		.pipe(gulp.dest('./brewkrew/dest'));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass-dev', function() {
 	console.log(`===== Bundling scss: ${new Date().toString()} =====`);
 
 	return gulp.src(SASS_MAIN_FILE)
@@ -86,10 +86,28 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./brewkrew/dest'));
 });
 
-gulp.task('watch', ['build-dev', 'sass'], function() {
-	gulp.watch(JS_FILES, ['build-dev']);
-	return gulp.watch(SASS_FILES, ['sass']);
+gulp.task('sass-prod', function() {
+	console.log(`===== Bundling scss: ${new Date().toString()} =====`);
+
+	return gulp.src(SASS_MAIN_FILE)
+		.pipe(plumber({
+			errorHandler: function(err) {
+				notify.onError({
+					title: 'Gulp error in ' + err.plugin,
+					message: err.toString()
+				})(err);
+			}
+		}))
+		.pipe(sass())
+		.pipe(autoprefixer('last 2 versions'))
+		.pipe(minify())
+		.pipe(gulp.dest('./brewkrew/dest'));
 });
 
-gulp.task('dev', ['build-dev', 'sass']);
-gulp.task('default', ['build-prod', 'sass']);
+gulp.task('watch', ['build-dev', 'sass-dev'], function() {
+	gulp.watch(JS_FILES, ['build-dev']);
+	return gulp.watch(SASS_FILES, ['sass-dev']);
+});
+
+gulp.task('dev', ['build-dev', 'sass-dev']);
+gulp.task('default', ['build-prod', 'sass-prod']);

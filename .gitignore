@@ -1,6 +1,7 @@
 node_modules/
 .vscode
 **/.DS_Store
+**/*.map
 brewkrew/db/client_secret.json
 brewkrew/db/credentials.json
 brewkrew/db/api-key.json
