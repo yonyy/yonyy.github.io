@@ -63,7 +63,8 @@ class Map extends React.Component {
 Map.propTypes = {
 	points: PropTypes.array.isRequired,
 	google: PropTypes.object,
-	data: PropTypes.array.isRequired
+	data: PropTypes.array.isRequired,
+	doubleClick: PropTypes.func.isRequired
 };
 
 module.exports = Map;
