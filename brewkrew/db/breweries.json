@@ -11,7 +11,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 220,
+                    "review_count": 222,
                     "name": "10 Barrel Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/10-barrel-brewing-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -78,7 +78,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 81,
+                    "review_count": 82,
                     "name": "2kids Brewing Co",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/2kids-brewing-co-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -258,7 +258,7 @@
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 1768,
+                    "review_count": 1772,
                     "name": "Stone Brewing World Bistro & Gardens-Liberty Station",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/stone-brewing-world-bistro-and-gardens-liberty-station-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -326,7 +326,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 331,
+                    "review_count": 330,
                     "name": "AleSmith Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/alesmith-brewing-company-san-diego-3?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -444,7 +444,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 478,
+                    "review_count": 480,
                     "name": "Alpine Beer Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/alpine-beer-company-alpine?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -507,7 +507,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 753,
+                    "review_count": 757,
                     "name": "Amplified Ale Works",
                     "transactions": [
                         "pickup"
@@ -577,7 +577,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 753,
+                    "review_count": 757,
                     "name": "Amplified Ale Works",
                     "transactions": [
                         "pickup"
@@ -885,7 +885,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 952,
+                    "review_count": 957,
                     "name": "Bagby Beer Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/bagby-beer-company-oceanside-14?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1011,7 +1011,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 436,
+                    "review_count": 437,
                     "name": "Home Brew Mart - Ballast Point",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/home-brew-mart-ballast-point-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1071,11 +1071,11 @@
                     "longitude": -117.16970443725586
                 }
             },
-            "total": 64,
+            "total": 62,
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 1473,
+                    "review_count": 1479,
                     "name": "Ballast Point Little Italy",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/ballast-point-little-italy-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1134,18 +1134,18 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 146,
+                    "review_count": 149,
                     "name": "Barn Brewery",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/barn-brewery-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
-                    "price": "$$",
+                    "price": "$",
                     "distance": 12.293961399317764,
                     "coordinates": {
                         "latitude": 32.7555700512994,
                         "longitude": -117.132338401943
                     },
                     "alias": "barn-brewery-san-diego-2",
-                    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/RsTjG3Qf1FZsBKxOwhmrkQ/o.jpg",
+                    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/cveh15ZlIQarYc-znpSawQ/o.jpg",
                     "categories": [
                         {
                             "alias": "breweries",
@@ -1314,8 +1314,8 @@
             ]
         },
         "coordinates": {
-            "lat": 33.14042209999999,
-            "lng": -117.227523
+            "lat": 33.1402282,
+            "lng": -117.2274366
         },
         "label": "Battlemage Brewing Company",
         "address": "2870 Scott St, Vista, CA 92081",
@@ -1390,7 +1390,7 @@
                     "longitude": -117.21176147460938
                 }
             },
-            "total": 118,
+            "total": 117,
             "businesses": [
                 {
                     "rating": 4,
@@ -1454,7 +1454,7 @@
             "businesses": [
                 {
                     "rating": 5,
-                    "review_count": 154,
+                    "review_count": 155,
                     "name": "Bear Roots Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/bear-roots-brewing-vista-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1497,8 +1497,8 @@
             ]
         },
         "coordinates": {
-            "lat": 33.1882421,
-            "lng": -117.2263263
+            "lat": 33.1882451,
+            "lng": -117.2263421
         },
         "label": "Bear Roots Brewing Co.",
         "address": "1213 S. Santa Fe Avenue, Vista, CA 92083",
@@ -1517,7 +1517,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 358,
+                    "review_count": 362,
                     "name": "Belching Beaver Brewery",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/belching-beaver-brewery-vista?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1577,7 +1577,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 43,
+                    "review_count": 44,
                     "name": "Belching Beaver Brewery",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/belching-beaver-brewery-oceanside?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1636,7 +1636,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 455,
+                    "review_count": 457,
                     "name": "Belching Beaver Brewery Tavern & Grill",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/belching-beaver-brewery-tavern-and-grill-vista-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1814,7 +1814,7 @@
             "businesses": [
                 {
                     "rating": 5,
-                    "review_count": 75,
+                    "review_count": 77,
                     "name": "Black Plague Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/black-plague-brewing-oceanside?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1873,7 +1873,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 138,
+                    "review_count": 139,
                     "name": "BNS Brewing & Distilling",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/bns-brewing-and-distilling-santee?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -1941,7 +1941,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 186,
+                    "review_count": 187,
                     "name": "Bolt Brewery",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/bolt-brewery-la-mesa?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -2008,7 +2008,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 222,
+                    "review_count": 224,
                     "name": "Booze Brothers Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/booze-brothers-brewing-vista?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -2068,7 +2068,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 190,
+                    "review_count": 195,
                     "name": "Border X Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/border-x-brewing-san-diego-3?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -2131,11 +2131,11 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 502,
+                    "review_count": 501,
                     "name": "Breakwater Brewing Company",
                     "transactions": [
-                        "pickup",
-                        "delivery"
+                        "delivery",
+                        "pickup"
                     ],
                     "url": "https://www.yelp.com/biz/breakwater-brewing-company-oceanside?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
                     "price": "$$",
@@ -2145,7 +2145,7 @@
                         "longitude": -117.3790501
                     },
                     "alias": "breakwater-brewing-company-oceanside",
-                    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Kqg0HK2jrwIuV9XmySUqzQ/o.jpg",
+                    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Mud-8cgNWJbXSPfNYTojpQ/o.jpg",
                     "categories": [
                         {
                             "alias": "breweries",
@@ -2201,7 +2201,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 124,
+                    "review_count": 125,
                     "name": "Burgeon Beer Co",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/burgeon-beer-co-carlsbad?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -2443,7 +2443,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 51,
+                    "review_count": 52,
                     "name": "Chula Vista Brewery",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/chula-vista-brewery-chula-vista?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -2562,7 +2562,7 @@
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 312,
+                    "review_count": 314,
                     "name": "Coronado Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/coronado-brewing-company-imperial-beach-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -2621,11 +2621,11 @@
                     "longitude": -117.20455169677734
                 }
             },
-            "total": 68,
+            "total": 67,
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 312,
+                    "review_count": 314,
                     "name": "Coronado Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/coronado-brewing-company-imperial-beach-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -2692,13 +2692,14 @@
                     "name": "Council Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/council-brewing-company-santee?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
+                    "price": "$$",
                     "distance": 16333.958444281652,
                     "coordinates": {
                         "latitude": 32.83203,
                         "longitude": -116.97957
                     },
                     "alias": "council-brewing-company-santee",
-                    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/LF_vgy10p643T-wQbTdAIw/o.jpg",
+                    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/fBGX2-DQ6R0cpqIQyNZhJw/o.jpg",
                     "categories": [
                         {
                             "alias": "breweries",
@@ -2933,7 +2934,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 67,
+                    "review_count": 69,
                     "name": "Division 23 Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/division-23-brewing-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -3052,7 +3053,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 192,
+                    "review_count": 196,
                     "name": "Duck Foot Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/duck-foot-brewing-company-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -3100,8 +3101,8 @@
             ]
         },
         "coordinates": {
-            "lat": 32.8853381,
-            "lng": -117.1564712
+            "lat": 32.8854988,
+            "lng": -117.1563922
         },
         "label": "Duck Foot Brewing Co.",
         "address": "8920 Kenamar Dr. Suite #210, San Diego, CA 92121",
@@ -3180,7 +3181,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 79,
+                    "review_count": 80,
                     "name": "Eppig Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/eppig-brewing-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -3299,7 +3300,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 219,
+                    "review_count": 221,
                     "name": "Fall Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/fall-brewing-company-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -3480,7 +3481,7 @@
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 925,
+                    "review_count": 929,
                     "name": "Gordon Biersch Brewery Restaurant",
                     "transactions": [
                         "delivery",
@@ -3550,7 +3551,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 920,
+                    "review_count": 924,
                     "name": "Green Flash Brewing Co",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/green-flash-brewing-co-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -3783,11 +3784,11 @@
                     "longitude": -117.15631484985352
                 }
             },
-            "total": 266,
+            "total": 265,
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 478,
+                    "review_count": 483,
                     "name": "Half Door Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/half-door-brewing-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -3910,7 +3911,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 167,
+                    "review_count": 166,
                     "name": "Helix Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/helix-brewing-la-mesa-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -3973,11 +3974,11 @@
                     "longitude": -117.14996337890625
                 }
             },
-            "total": 140,
+            "total": 139,
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 402,
+                    "review_count": 403,
                     "name": "Hillcrest Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/hillcrest-brewing-company-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -4124,7 +4125,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 100,
+                    "review_count": 103,
                     "name": "Indian Joe Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/indian-joe-brewing-vista-3?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -4250,7 +4251,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 266,
+                    "review_count": 268,
                     "name": "Iron Fist Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/iron-fist-brewing-vista?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -4306,7 +4307,7 @@
                     "longitude": -117.0919418334961
                 }
             },
-            "total": 5,
+            "total": 6,
             "businesses": [
                 {
                     "rating": 4.5,
@@ -4484,11 +4485,11 @@
                     "longitude": -117.11357116699219
                 }
             },
-            "total": 7,
+            "total": 6,
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 695,
+                    "review_count": 702,
                     "name": "Karl Strauss Brewery Restaurant",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/karl-strauss-brewery-restaurant-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -4540,7 +4541,7 @@
         },
         "label": "Karl Strauss 4S Ranch",
         "address": "10448 Reserve Drive, San Diego, CA 92127",
-        "visited": false,
+        "visited": true,
         "id": 74
     },
     {
@@ -4555,7 +4556,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 1144,
+                    "review_count": 1147,
                     "name": "Karl Strauss Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/karl-strauss-brewing-company-carlsbad?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -4607,7 +4608,7 @@
         },
         "label": "Karl Strauss Carlsbad",
         "address": "5801 Armada Drive, Carlsbad, CA 92008",
-        "visited": false,
+        "visited": true,
         "id": 75
     },
     {
@@ -4618,7 +4619,7 @@
                     "longitude": -117.16712951660156
                 }
             },
-            "total": 63,
+            "total": 62,
             "businesses": [
                 {
                     "rating": 4,
@@ -4674,7 +4675,7 @@
         },
         "label": "Karl Strauss Downtown",
         "address": "1157 Columbia Street, San Diego, CA 92101",
-        "visited": false,
+        "visited": true,
         "id": 76
     },
     {
@@ -4742,7 +4743,7 @@
         },
         "label": "Karl Strauss La Jolla",
         "address": "1044 Wall Street, La Jolla, CA 92037",
-        "visited": false,
+        "visited": true,
         "id": 77
     },
     {
@@ -4757,7 +4758,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 695,
+                    "review_count": 702,
                     "name": "Karl Strauss Brewery Restaurant",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/karl-strauss-brewery-restaurant-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -4809,7 +4810,7 @@
         },
         "label": "Karl Strauss",
         "address": "5985 Santa Fe Street, San Diego, CA 92109",
-        "visited": false,
+        "visited": true,
         "id": 78
     },
     {
@@ -4824,7 +4825,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 1192,
+                    "review_count": 1193,
                     "name": "Karl Strauss Brewery Gardens",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/karl-strauss-brewery-gardens-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -4876,7 +4877,7 @@
         },
         "label": "Karl Strauss Sorrento Mesa",
         "address": "9675 Scranton Rd, San Diego, CA 92121",
-        "visited": false,
+        "visited": true,
         "id": 79
     },
     {
@@ -4891,7 +4892,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 41,
+                    "review_count": 42,
                     "name": "Kensington Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/kensington-brewing-company-san-diego-3?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -5194,7 +5195,7 @@
                     "longitude": -117.27441787719727
                 }
             },
-            "total": 53,
+            "total": 54,
             "businesses": [
                 {
                     "rating": 3.5,
@@ -5247,8 +5248,8 @@
             ]
         },
         "coordinates": {
-            "lat": 32.8408148,
-            "lng": -117.2743615
+            "lat": 32.840839,
+            "lng": -117.2743742
         },
         "label": "La Jolla Beer Co.",
         "address": "7536 Fay Avenue, San Diego, CA 92037",
@@ -5267,7 +5268,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 154,
+                    "review_count": 155,
                     "name": "Latitude 33 Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/latitude-33-brewing-vista?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -5327,7 +5328,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 127,
+                    "review_count": 128,
                     "name": "Legacy Brewing Co",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/legacy-brewing-co-oceanside?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -5502,52 +5503,47 @@
                     "longitude": -117.35904693603516
                 }
             },
-            "total": 16,
+            "total": 18,
             "businesses": [
                 {
-                    "rating": 4,
-                    "review_count": 572,
-                    "name": "Urge Gastropub and Whiskey Bank",
+                    "rating": 5,
+                    "review_count": 1,
+                    "name": "Mason Ale Works",
                     "transactions": [],
-                    "url": "https://www.yelp.com/biz/urge-gastropub-and-whiskey-bank-oceanside?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
-                    "price": "$$",
-                    "distance": 16.323745475225582,
+                    "url": "https://www.yelp.com/biz/mason-ale-works-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
+                    "distance": 30963.751925561777,
                     "coordinates": {
-                        "latitude": 33.1719442378322,
-                        "longitude": -117.359187524429
+                        "latitude": 32.9284854250188,
+                        "longitude": -117.197975746501
                     },
-                    "alias": "urge-gastropub-and-whiskey-bank-oceanside",
-                    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/3zxmQgq4YUUjVhyXi3iZdA/o.jpg",
+                    "alias": "mason-ale-works-san-diego",
+                    "image_url": "",
                     "categories": [
                         {
-                            "alias": "gastropubs",
-                            "title": "Gastropubs"
+                            "alias": "restaurants",
+                            "title": "Restaurants"
                         },
                         {
-                            "alias": "cocktailbars",
-                            "title": "Cocktail Bars"
-                        },
-                        {
-                            "alias": "whiskeybars",
-                            "title": "Whiskey Bars"
+                            "alias": "winetastingroom",
+                            "title": "Wine Tasting Room"
                         }
                     ],
-                    "display_phone": "(760) 429-7424",
-                    "phone": "+17604297424",
-                    "id": "UHds4K_S5vtM1vDTxcpYEQ",
+                    "display_phone": "",
+                    "phone": "",
+                    "id": "xub5A1nIM4o-YAeBWauwcw",
                     "is_closed": false,
                     "location": {
-                        "city": "Oceanside",
+                        "city": "San Diego",
                         "display_address": [
-                            "2002 S Coast Hwy",
-                            "Oceanside, CA 92054"
+                            "5550 Carmel Mountain Rd",
+                            "San Diego, CA 92130"
                         ],
                         "country": "US",
                         "address2": "",
-                        "address3": "",
+                        "address3": null,
                         "state": "CA",
-                        "address1": "2002 S Coast Hwy",
-                        "zip_code": "92054"
+                        "address1": "5550 Carmel Mountain Rd",
+                        "zip_code": "92130"
                     }
                 }
             ]
@@ -5569,52 +5565,47 @@
                     "longitude": -117.1585464477539
                 }
             },
-            "total": 11,
+            "total": 13,
             "businesses": [
                 {
-                    "rating": 3.5,
-                    "review_count": 392,
-                    "name": "Urge Gastropub & Common House",
+                    "rating": 5,
+                    "review_count": 1,
+                    "name": "Mason Ale Works",
                     "transactions": [],
-                    "url": "https://www.yelp.com/biz/urge-gastropub-and-common-house-san-marcos?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
-                    "price": "$$",
-                    "distance": 8.857700922822822,
+                    "url": "https://www.yelp.com/biz/mason-ale-works-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
+                    "distance": 23345.225629886743,
                     "coordinates": {
-                        "latitude": 33.13549,
-                        "longitude": -117.15897
+                        "latitude": 32.9284854250188,
+                        "longitude": -117.197975746501
                     },
-                    "alias": "urge-gastropub-and-common-house-san-marcos",
-                    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/MWEoYeuhQY0GUcaIhWaLgw/o.jpg",
+                    "alias": "mason-ale-works-san-diego",
+                    "image_url": "",
                     "categories": [
                         {
-                            "alias": "gastropubs",
-                            "title": "Gastropubs"
+                            "alias": "restaurants",
+                            "title": "Restaurants"
                         },
                         {
-                            "alias": "bowling",
-                            "title": "Bowling"
-                        },
-                        {
-                            "alias": "tradamerican",
-                            "title": "American (Traditional)"
+                            "alias": "winetastingroom",
+                            "title": "Wine Tasting Room"
                         }
                     ],
-                    "display_phone": "(760) 798-8822",
-                    "phone": "+17607988822",
-                    "id": "HbenatMYM8QAv1HkkslKVw",
+                    "display_phone": "",
+                    "phone": "",
+                    "id": "xub5A1nIM4o-YAeBWauwcw",
                     "is_closed": false,
                     "location": {
-                        "city": "San Marcos",
+                        "city": "San Diego",
                         "display_address": [
-                            "255 Redel Rd",
-                            "San Marcos, CA 92078"
+                            "5550 Carmel Mountain Rd",
+                            "San Diego, CA 92130"
                         ],
                         "country": "US",
-                        "address2": null,
-                        "address3": "",
+                        "address2": "",
+                        "address3": null,
                         "state": "CA",
-                        "address1": "255 Redel Rd",
-                        "zip_code": "92078"
+                        "address1": "5550 Carmel Mountain Rd",
+                        "zip_code": "92130"
                     }
                 }
             ]
@@ -5759,7 +5750,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 331,
+                    "review_count": 330,
                     "name": "AleSmith Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/alesmith-brewing-company-san-diego-3?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -5814,11 +5805,11 @@
                     "longitude": -117.15150833129883
                 }
             },
-            "total": 113,
+            "total": 112,
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 619,
+                    "review_count": 621,
                     "name": "Mission Brewery",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/mission-brewery-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -5877,7 +5868,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 530,
+                    "review_count": 533,
                     "name": "Modern Times Beer",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/modern-times-beer-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -5951,7 +5942,7 @@
                         "longitude": -117.14918
                     },
                     "alias": "monkey-paw-san-diego-2",
-                    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/DWZQp-O6-WW296LHPY5VYg/o.jpg",
+                    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/USp2aJl2swIqgpP92YLjFA/o.jpg",
                     "categories": [
                         {
                             "alias": "pubs",
@@ -6003,7 +5994,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 168,
+                    "review_count": 169,
                     "name": "Mother Earth Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/mother-earth-brewing-company-vista-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -6181,11 +6172,11 @@
                     "longitude": -117.12919235229492
                 }
             },
-            "total": 258,
+            "total": 257,
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 219,
+                    "review_count": 221,
                     "name": "North Park Beer Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/north-park-beer-company-san-diego-5?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -6244,7 +6235,7 @@
             "businesses": [
                 {
                     "rating": 5,
-                    "review_count": 34,
+                    "review_count": 35,
                     "name": "Northern Pine Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/northern-pine-brewing-oceanside?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -6303,7 +6294,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 181,
+                    "review_count": 180,
                     "name": "Novo Brazil Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/novo-brazil-brewing-chula-vista?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -6366,7 +6357,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 193,
+                    "review_count": 192,
                     "name": "OB Brewery",
                     "transactions": [
                         "pickup"
@@ -6502,7 +6493,7 @@
             "businesses": [
                 {
                     "rating": 5,
-                    "review_count": 103,
+                    "review_count": 104,
                     "name": "Oceanside Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/oceanside-brewing-company-oceanside-3?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -6513,7 +6504,7 @@
                         "longitude": -117.352234328172
                     },
                     "alias": "oceanside-brewing-company-oceanside-3",
-                    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/mOA3nkIyKEYcOU3xyrdzAw/o.jpg",
+                    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/cLtlIXZJid1z3bbQUiBzlA/o.jpg",
                     "categories": [
                         {
                             "alias": "breweries",
@@ -6621,11 +6612,11 @@
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 1113,
+                    "review_count": 1114,
                     "name": "Pacific Beach AleHouse",
                     "transactions": [
-                        "pickup",
-                        "delivery"
+                        "delivery",
+                        "pickup"
                     ],
                     "url": "https://www.yelp.com/biz/pacific-beach-alehouse-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
                     "price": "$$",
@@ -6811,7 +6802,7 @@
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 471,
+                    "review_count": 473,
                     "name": "Pizza Port Bressi Ranch",
                     "transactions": [
                         "pickup"
@@ -6876,7 +6867,7 @@
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 1751,
+                    "review_count": 1755,
                     "name": "Pizza Port",
                     "transactions": [
                         "pickup"
@@ -6945,7 +6936,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 1131,
+                    "review_count": 1132,
                     "name": "Pizza Port Ocean Beach",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/pizza-port-ocean-beach-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -7008,7 +6999,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 1296,
+                    "review_count": 1299,
                     "name": "Pizza Port Solana Beach",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/pizza-port-solana-beach-solana-beach?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -7071,7 +7062,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 463,
+                    "review_count": 464,
                     "name": "Plan 9 Alehouse",
                     "transactions": [
                         "delivery",
@@ -7256,7 +7247,7 @@
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 709,
+                    "review_count": 711,
                     "name": "Honda Center",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/honda-center-anaheim-6?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -7323,7 +7314,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 503,
+                    "review_count": 504,
                     "name": "Prohibition Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/prohibition-brewing-company-vista-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -7438,11 +7429,11 @@
                     "longitude": -117.15717315673828
                 }
             },
-            "total": 9,
+            "total": 10,
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 410,
+                    "review_count": 414,
                     "name": "Pure Project",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/pure-project-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -7617,7 +7608,7 @@
                     "longitude": -117.16060638427734
                 }
             },
-            "total": 155,
+            "total": 153,
             "businesses": [
                 {
                     "rating": 4.5,
@@ -7806,7 +7797,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 184,
+                    "review_count": 186,
                     "name": "Rough Draft Brewing Company",
                     "transactions": [
                         "delivery",
@@ -7925,11 +7916,11 @@
                     "longitude": -117.09897994995117
                 }
             },
-            "total": 95,
+            "total": 94,
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 19,
+                    "review_count": 18,
                     "name": "San Diego Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/san-diego-brewing-company-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -7968,8 +7959,8 @@
             ]
         },
         "coordinates": {
-            "lat": 32.7923274,
-            "lng": -117.0990547
+            "lat": 32.7921228,
+            "lng": -117.099174
         },
         "label": "San Diego Brewing Company",
         "address": "10450 Friars Rd. Ste. L, San Diego, CA 92120",
@@ -7984,11 +7975,11 @@
                     "longitude": -117.12867736816406
                 }
             },
-            "total": 238,
+            "total": 237,
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 19,
+                    "review_count": 18,
                     "name": "San Diego Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/san-diego-brewing-company-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -8043,11 +8034,11 @@
                     "longitude": -117.1908187866211
                 }
             },
-            "total": 54,
+            "total": 53,
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 303,
+                    "review_count": 305,
                     "name": "San Marcos Brewery and Grill",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/san-marcos-brewery-and-grill-san-marcos-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -8284,11 +8275,11 @@
                     "longitude": -117.12987899780273
                 }
             },
-            "total": 198,
+            "total": 197,
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 194,
+                    "review_count": 195,
                     "name": "South Park Brewing Company",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/south-park-brewing-company-san-diego-4?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -8464,45 +8455,41 @@
             "total": 12,
             "businesses": [
                 {
-                    "rating": 4,
-                    "review_count": 170,
-                    "name": "Saint Archer Brewery",
+                    "rating": 5,
+                    "review_count": 4,
+                    "name": "Saint Archer Brewing Co",
                     "transactions": [],
-                    "url": "https://www.yelp.com/biz/saint-archer-brewery-san-diego?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
-                    "price": "$",
-                    "distance": 39.816555365749814,
+                    "url": "https://www.yelp.com/biz/saint-archer-brewing-co-encinitas?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
+                    "price": "$$",
+                    "distance": 24382.536043598066,
                     "coordinates": {
-                        "latitude": 32.880493,
-                        "longitude": -117.1631014
+                        "latitude": 33.0659358649034,
+                        "longitude": -117.302930348592
                     },
-                    "alias": "saint-archer-brewery-san-diego",
-                    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/5nyz4547EQuBkN3o8C47pw/o.jpg",
+                    "alias": "saint-archer-brewing-co-encinitas",
+                    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/deuGjkfB34wj_ZBFW0r3Og/o.jpg",
                     "categories": [
                         {
                             "alias": "breweries",
                             "title": "Breweries"
-                        },
-                        {
-                            "alias": "beer_and_wine",
-                            "title": "Beer, Wine & Spirits"
                         }
                     ],
                     "display_phone": "(858) 225-2337",
                     "phone": "+18582252337",
-                    "id": "mIeugOb1K3YY1PI--P1AZQ",
+                    "id": "5hf_Hj3VxQo1474xQSvp9A",
                     "is_closed": false,
                     "location": {
-                        "city": "San Diego",
+                        "city": "Encinitas",
                         "display_address": [
-                            "9550 Distribution Ave",
-                            "San Diego, CA 92121"
+                            "978 N Coast Hwy 101",
+                            "Encinitas, CA 92024"
                         ],
                         "country": "US",
                         "address2": "",
-                        "address3": "",
+                        "address3": null,
                         "state": "CA",
-                        "address1": "9550 Distribution Ave",
-                        "zip_code": "92121"
+                        "address1": "978 N Coast Hwy 101",
+                        "zip_code": "92024"
                     }
                 }
             ]
@@ -8528,7 +8515,7 @@
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 3983,
+                    "review_count": 3993,
                     "name": "Stone Brewing World Bistro & Gardens Escondido",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/stone-brewing-world-bistro-and-gardens-escondido-escondido-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -8583,11 +8570,11 @@
                     "longitude": -117.21124649047852
                 }
             },
-            "total": 58,
+            "total": 57,
             "businesses": [
                 {
                     "rating": 3.5,
-                    "review_count": 1768,
+                    "review_count": 1772,
                     "name": "Stone Brewing World Bistro & Gardens-Liberty Station",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/stone-brewing-world-bistro-and-gardens-liberty-station-san-diego-2?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
@@ -8949,21 +8936,21 @@
                     "longitude": -117.26188659667969
                 }
             },
-            "total": 2,
+            "total": 1,
             "businesses": [
                 {
                     "rating": 4,
-                    "review_count": 235,
-                    "name": "Viewpoint Brewing Co",
+                    "review_count": 237,
+                    "name": "Viewpoint Brewing",
                     "transactions": [],
-                    "url": "https://www.yelp.com/biz/viewpoint-brewing-co-del-mar-5?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
+                    "url": "https://www.yelp.com/biz/viewpoint-brewing-del-mar-6?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",
                     "price": "$$",
                     "distance": 8.679799054939767,
                     "coordinates": {
                         "latitude": 32.9700036,
                         "longitude": -117.261944
                     },
-                    "alias": "viewpoint-brewing-co-del-mar-5",
+                    "alias": "viewpoint-brewing-del-mar-6",
                     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/s6dPmSkJfiD0Ws-YWHgKBA/o.jpg",
                     "categories": [
                         {
@@ -9131,7 +9118,7 @@
             "businesses": [
                 {
                     "rating": 4.5,
-                    "review_count": 82,
+                    "review_count": 83,
                     "name": "Wild Barrel Brewing",
                     "transactions": [],
                     "url": "https://www.yelp.com/biz/wild-barrel-brewing-san-marcos?adjust_creative=F2DqTzvWRhv46QaY4u-HIA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F2DqTzvWRhv46QaY4u-HIA",

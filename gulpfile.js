@@ -27,19 +27,25 @@ gulp.task('build-dev', function() {
 	console.log(`===== Bundling js: ${new Date().toString()} =====`);
 
 	return bundler.bundle()
-		.pipe(plumber({
-			errorHandler: function(err) {
-				notify.onError({
-					title: 'Gulp error in ' + err.plugin,
-					message: err.toString()
-				})(err);
-			}
-		}))
+		.on('error', (err) => {
+			notify.onError({
+				title: 'Gulp error in ' + err.plugin,
+				message: err.toString()
+			})(err);
+			this.emit('end');
+		})
 		.pipe(source('build.js'))
 		.pipe(buffer())
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./brewkrew/dest'));
+		.pipe(gulp.dest('./brewkrew/dest'))
+		.pipe(notify({
+			title: 'JS build finished',
+			message: 'Generated file: <%= file.relative %> @ <%= options.date %>',
+			templateOptions: {
+				date: new Date()
+			}
+		}));
 });
 
 
@@ -52,18 +58,23 @@ gulp.task('build-prod', function() {
 
 	console.log(`===== Bundling js: ${new Date().toString()} =====`);
 	return bundler.bundle()
-		.pipe(plumber({
-			errorHandler: function(err) {
-				notify.onError({
-					title: 'Gulp error in ' + err.plugin,
-					message: err.toString()
-				})(err);
-			}
-		}))
+		.on('error', (err) => {
+			notify.onError({
+				title: 'Gulp error in ' + err.plugin,
+				message: err.toString()
+			})(err);
+		})
 		.pipe(source('build.js'))
 		.pipe(buffer())
 		.pipe(uglify())
-		.pipe(gulp.dest('./brewkrew/dest'));
+		.pipe(gulp.dest('./brewkrew/dest'))
+		.pipe(notify({
+			title: 'JS build finished',
+			message: 'Generated file: <%= file.relative %> @ <%= options.date %>',
+			templateOptions: {
+				date: new Date()
+			}
+		}));
 });
 
 gulp.task('sass-dev', function() {
@@ -83,7 +94,14 @@ gulp.task('sass-dev', function() {
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(minify())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./brewkrew/dest'));
+		.pipe(gulp.dest('./brewkrew/dest'))
+		.pipe(notify({
+			title: 'Sass build finished',
+			message: 'Generated file: <%= file.relative %> @ <%= options.date %>',
+			templateOptions: {
+				date: new Date()
+			}
+		}));
 });
 
 gulp.task('sass-prod', function() {
@@ -101,7 +119,14 @@ gulp.task('sass-prod', function() {
 		.pipe(sass())
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(minify())
-		.pipe(gulp.dest('./brewkrew/dest'));
+		.pipe(gulp.dest('./brewkrew/dest'))
+		.pipe(notify({
+			title: 'Sass build finished',
+			message: 'Generated file: <%= file.relative %> @ <%= options.date %>',
+			templateOptions: {
+				date: new Date()
+			}
+		}));
 });
 
 gulp.task('watch', ['build-dev', 'sass-dev'], function() {

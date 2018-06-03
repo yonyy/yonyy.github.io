@@ -1,35 +1,43 @@
 [
     {
         "name": "Anny Aslanian",
-        "initials": "AA"
+        "initials": "AA",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/26165933_10215248795276630_8047464236609161737_n.jpg?_nc_cat=0&oh=bc7ff92c38ef979c847fa3c3d9e9b9d5&oe=5BB934CD"
     },
     {
         "name": "Arianna Morse",
-        "initials": "AM"
+        "initials": "AM",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/12552852_1130556633645753_492616272793901914_n.jpg?_nc_cat=0&oh=3d83f00ad71a420bad2322f7b1f3d05c&oe=5B8821D8"
     },
     {
         "name": "Carl Dyer",
-        "initials": "CD"
+        "initials": "CD",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/31655487_2084058714942503_1125368601543412624_n.jpg?_nc_cat=0&oh=22192fdee272668ac081032952f4d37e&oe=5B7E2E1E"
     },
     {
         "name": "Gaurav Vachhani",
-        "initials": "GV"
+        "initials": "GV",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t31.0-8/19441964_10207713633637159_2249755913283424583_o.jpg?_nc_cat=0&oh=bf48703e014132760a0c65b911d44a8d&oe=5B7A72EB"
     },
     {
         "name": "Kevin Dang",
-        "initials": "KD"
+        "initials": "KD",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/32349443_2235125916504658_5992213598284283904_o.jpg?_nc_cat=0&oh=6ddc3ced10793238bc02c7625fbabb45&oe=5B8794C3"
     },
     {
         "name": "Brandon Whang",
-        "initials": "BW"
+        "initials": "BW",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t31.0-8/12484587_1111301628880219_2314065622127490404_o.jpg?_nc_cat=0&oh=eac2e7c43e15eb7085d6c4ed8536cb95&oe=5BC0AA79"
     },
     {
         "name": "Holly Tan",
-        "initials": "HT"
+        "initials": "HT",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t31.0-8/27164631_10204569922205270_7693934281950539475_o.jpg?_nc_cat=0&oh=b8a1c89c196556c2755f9382f4ae0a93&oe=5BB2BD08"
     },
     {
         "name": "Rose Zheng",
-        "initials": "RZ"
+        "initials": "RZ",
+        "backgroundUrl" : "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/31519331_10214085321099348_444058678778134528_o.jpg?_nc_cat=0&oh=0d32ba33dbd5753bafa88b07c248507e&oe=5B78478B"
     },
     {
         "name": "Yony Perez",
