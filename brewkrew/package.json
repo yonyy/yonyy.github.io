@@ -30,6 +30,6 @@
   "scripts": {
     "start": "rm dist/* && parcel index.html -p 8080 --no-cache",
     "build": "rm dist/* && parcel build index.html --out-dir dist/ --no-source-maps --no-cache",
-    "publish": "aws s3 sync ./dist s3://brewkrew.io/ --exclude 'dist/*.map'"
+    "publish": "npm run build && aws s3 sync ./dist s3://brewkrew.io/ --exclude '*.map' --delete"
   }
 }
