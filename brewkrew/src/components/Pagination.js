@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const PageNumbers = ({ pageNumber, pagesTotal }) => {
 	const maxShow = 5;
@@ -75,4 +75,4 @@ Pagination.propTypes = {
 	backPage: PropTypes.func.isRequired
 };
 
-module.exports = Pagination;
+export default Pagination;

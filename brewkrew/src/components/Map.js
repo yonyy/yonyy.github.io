@@ -1,8 +1,8 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const PropTypes = require('prop-types');
-const GoogleMarkers = require('./util/GoogleMarkers');
-const styledMap = require('../stylemap/stylemap');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import GoogleMarkers from './util/GoogleMarkers';
+import styledMap from '../stylemap/stylemap';
 
 const STYLE_NAME = 'Brew Style';
 const CENTER_LAT_LONG = {lat: 32.8806222, lng: -117.1652732};
@@ -67,4 +67,4 @@ Map.propTypes = {
 	doubleClick: PropTypes.func.isRequired
 };
 
-module.exports = Map;
+export default Map;

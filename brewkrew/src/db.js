@@ -1,3 +1,3 @@
-const data = require('../db/breweries');
+import data from '../db/breweries';
 
-module.exports = data;
+export default data;

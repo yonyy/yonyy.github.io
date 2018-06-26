@@ -1,14 +1,14 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const ErrorBoundary = require('./ErrorBoundary');
-const HeaderContainer = require('./HeaderContainer');
-const Menu = require('./Menu');
-const Search = require('./Search');
-const Map = require('./Map');
-const MapOverlayButtons = require('./MapOverlayButtons');
-const PaginationCards = require('./PaginationCards');
-const Conquerors = require('./Conquerors');
-const data = require('../db');
+import React from 'react';
+import PropTypes from 'prop-types';
+import ErrorBoundary from './ErrorBoundary';
+import HeaderContainer from './HeaderContainer';
+import Menu from'./Menu';
+import Search from './Search';
+import Map from './Map';
+import MapOverlayButtons from './MapOverlayButtons';
+import PaginationCards from './PaginationCards';
+import Conquerors from './Conquerors';
+import data from '../db';
 
 class BrewKrewContainer extends React.Component {
 	constructor(props) {
@@ -90,4 +90,4 @@ BrewKrewContainer.propTypes = {
 	google: PropTypes.object
 };
 
-module.exports = BrewKrewContainer;
+export default BrewKrewContainer;

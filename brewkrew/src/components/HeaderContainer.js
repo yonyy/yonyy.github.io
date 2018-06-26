@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class HeaderContainer extends React.PureComponent {
 	render() {
@@ -17,4 +17,4 @@ HeaderContainer.propTypes = {
 	children: PropTypes.array
 };
 
-module.exports = HeaderContainer;
+export default HeaderContainer;

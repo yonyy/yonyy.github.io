@@ -1,6 +1,6 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const smoothScroll = require('./util/smoothScroll');
+import React from 'react';
+import PropTypes from 'prop-types';
+import smoothScroll from './util/smoothScroll';
 
 class AnchorButton extends React.PureComponent {
 	constructor(props) {
@@ -37,4 +37,4 @@ AnchorButton.propTypes = {
 	children: PropTypes.object
 };
 
-module.exports = AnchorButton;
+export default AnchorButton;

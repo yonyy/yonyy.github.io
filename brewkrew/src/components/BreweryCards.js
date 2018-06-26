@@ -1,6 +1,6 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const BreweryCard = require('./BreweryCard');
+import React from 'react';
+import PropTypes from 'prop-types';
+import BreweryCard from './BreweryCard';
 
 class BreweryCards extends React.Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ class BreweryCards extends React.Component {
 
 	render() {
 		return (
-			<div className='bk-cards-container'>
+			<div className='bk-cards-container dddsdsdsd'>
 				<div className='bk-cards-row'>
 					{
 						this.props.breweries.map((brewery) => {
@@ -31,4 +31,4 @@ BreweryCards.propTypes = {
 	}))
 };
 
-module.exports = BreweryCards;
+export default BreweryCards;

@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Search extends React.PureComponent {
 	constructor(props) {
@@ -41,4 +41,4 @@ Search.propTypes = {
 	onChange: PropTypes.func.isRequired
 };
 
-module.exports = Search;
+export default Search;

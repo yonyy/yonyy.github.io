@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function precisionRound(number, precision) {
 	const factor = Math.pow(10, precision);
@@ -45,4 +45,4 @@ BreweryCard.propTypes = {
 	})
 };
 
-module.exports = BreweryCard;
+export default BreweryCard;

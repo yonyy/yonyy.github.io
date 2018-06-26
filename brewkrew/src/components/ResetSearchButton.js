@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class ResetSearchButton extends React.PureComponent {
 	constructor(props) {
@@ -22,4 +22,4 @@ ResetSearchButton.propTypes = {
 	onClick: PropTypes.func.isRequired
 };
 
-module.exports = ResetSearchButton;
+export default ResetSearchButton;

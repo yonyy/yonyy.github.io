@@ -1,4 +1,4 @@
-const $ = require('jquery');
+import $ from 'jquery';
 
 function getDuration(target) {
 	const currentTop = $(window).scrollTop();
@@ -16,4 +16,4 @@ function smoothScroll(target) {
 	}, duration);
 }
 
-module.exports = smoothScroll;
+export default smoothScroll;

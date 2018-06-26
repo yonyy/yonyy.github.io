@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 class SearchResultsDropdown extends React.PureComponent {
 	constructor(props) {
@@ -39,4 +39,4 @@ class SearchResultsDropdown extends React.PureComponent {
 	}
 }
 
-module.exports = SearchResultsDropdown;
+export default SearchResultsDropdown;

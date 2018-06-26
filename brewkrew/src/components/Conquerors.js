@@ -1,6 +1,6 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const conquerors = require('./util/conquerors');
+import React from 'react';
+import PropTypes from 'prop-types';
+import conquerors from './util/conquerors';
 
 const ConquerorImage = ({ url, initials }) => {
 	if (!url) {
@@ -56,4 +56,4 @@ class Conquerors extends React.PureComponent {
 	}
 }
 
-module.exports = Conquerors;
+export default Conquerors;

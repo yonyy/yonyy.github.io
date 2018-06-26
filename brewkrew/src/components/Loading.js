@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Loading extends React.PureComponent {
 	constructor(props) {
@@ -33,4 +33,4 @@ Loading.defaultProps = {
 	size: 'md',
 };
 
-module.exports = Loading;
+export default Loading;

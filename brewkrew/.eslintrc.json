@@ -1,0 +1,56 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true,
+            "modules": true
+        },
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "react/prop-types": [
+            "warn"
+        ],
+        "react/jsx-uses-react" : [
+            "error"
+        ],
+        "react/jsx-uses-vars" : [
+            "error"
+        ]
+    },
+    "globals": {
+        "google": false
+    },
+    "overrides" : {
+        "files" : ["gulpfile.js", "index.js"],
+        "rules" : {
+            "no-console" : ["off"]
+        }
+    }
+}

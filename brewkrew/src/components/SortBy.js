@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class SortBy extends React.Component {
 	constructor(props) {
@@ -46,4 +46,4 @@ SortBy.propTypes = {
 	active: PropTypes.string.isRequired
 };
 
-module.exports = SortBy;
+export default SortBy;

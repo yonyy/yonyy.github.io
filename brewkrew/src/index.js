@@ -1,9 +1,11 @@
-require('babel-polyfill');
-const React = require('react');
-const ReactDOM = require('react-dom');
+import 'babel-polyfill';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const BrewKrewContainer = require('./components/BrewKrewContainer');
-const ErrorBoundary = require('./components/ErrorBoundary');
+import BrewKrewContainer from './components/BrewKrewContainer';
+import ErrorBoundary from './components/ErrorBoundary';
+
+import style from './sass/main.scss';
 
 class BrewKrew extends React.Component {
 	render() {
@@ -23,6 +25,8 @@ class BrewKrewErrorBoundary extends React.Component {
 		);
 	}
 }
+
+BrewKrewErrorBoundary.style = style;
 
 function render() {
 	ReactDOM.render(<BrewKrewErrorBoundary />, document.getElementById('root'));

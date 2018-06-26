@@ -1,10 +1,10 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const BreweryCards = require('./BreweryCards');
-const SortBy = require('./SortBy');
-const Pagination = require('./Pagination');
-const Loading = require('./Loading');
-const { sortByAZ, sortByZA, sortByDistance, sortByRating } = require('./util/sortByMethods');
+import React from 'react';
+import PropTypes from 'prop-types';
+import BreweryCards from './BreweryCards';
+import SortBy from './SortBy';
+import Pagination from './Pagination';
+import Loading from './Loading';
+import { sortByAZ, sortByZA, sortByDistance, sortByRating } from './util/sortByMethods';
 
 class PaginationCards extends React.Component {
 	constructor(props) {
@@ -154,4 +154,4 @@ PaginationCards.propTypes = {
 	limit: PropTypes.number.isRequired
 };
 
-module.exports = PaginationCards;
+export default PaginationCards;

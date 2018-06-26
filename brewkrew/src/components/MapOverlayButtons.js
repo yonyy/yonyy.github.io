@@ -1,7 +1,7 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const AnchorButton = require('./AnchorButton');
-const ResetSearchButton = require('./ResetSearchButton');
+import React from 'react';
+import PropTypes from 'prop-types';
+import AnchorButton from './AnchorButton';
+import ResetSearchButton from './ResetSearchButton';
 
 class MapOverLayButtons extends React.PureComponent {
 	constructor(props) {
@@ -28,4 +28,4 @@ MapOverLayButtons.propTypes = {
 	children: PropTypes.object
 };
 
-module.exports = MapOverLayButtons;
+export default MapOverLayButtons;

@@ -87,4 +87,4 @@ class GoogleMarkers {
 	}
 }
 
-module.exports = GoogleMarkers;
+export default GoogleMarkers;

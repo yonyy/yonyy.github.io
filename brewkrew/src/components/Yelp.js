@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Yelp extends React.Component {
 	constructor(props) {
@@ -20,4 +20,4 @@ Yelp.propTypes = {
 	card: PropTypes.object
 };
 
-module.exports = Yelp;
+export default Yelp;

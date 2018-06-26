@@ -1,5 +1,5 @@
-const _ = require('lodash');
-const distance = require('./distance');
+import _ from 'lodash';
+import distance from './distance';
 const MINUTES = 60000 * 10; // 10 minutes
 
 function sortByAZ(breweries) {
@@ -78,7 +78,7 @@ function sortByRating(breweries) {
 		.value();
 }
 
-module.exports = {
+export {
 	sortByAZ,
 	sortByZA,
 	sortByDistance,

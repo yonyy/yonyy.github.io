@@ -1,7 +1,7 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const smoothScroll = require('./util/smoothScroll');
-const { throttle } = require('lodash');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import smoothScroll from './util/smoothScroll';
+import { throttle } from 'lodash';
 
 const ESC = 'Escape';
 
@@ -82,4 +82,4 @@ class Menu extends React.PureComponent {
 	}
 }
 
-module.exports = Menu;
+export default Menu;

@@ -15,4 +15,4 @@ function getDistanceFromLatLonInMile(lat1,lon1,lat2,lon2) {
 	return 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km
 }
 
-module.exports = getDistanceFromLatLonInMile;
+export default getDistanceFromLatLonInMile;
