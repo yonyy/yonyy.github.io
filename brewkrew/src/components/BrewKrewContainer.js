@@ -8,6 +8,7 @@ import Map from './Map';
 import MapOverlayButtons from './MapOverlayButtons';
 import PaginationCards from './PaginationCards';
 import Conquerors from './Conquerors';
+import Alert from './Alert';
 import data from '../db';
 
 class BrewKrewContainer extends React.Component {
@@ -55,6 +56,7 @@ class BrewKrewContainer extends React.Component {
 		const results = (this.state.searchTerm) ? this.state.results : data;
 		return (
 			<ErrorBoundary>
+				<Alert/>
 				<div className='bk-container'>
 					<HeaderContainer>
 						<div className='bk-heading-item'>

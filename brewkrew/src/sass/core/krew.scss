@@ -15,7 +15,7 @@
 	height: $heading-container-height;
 	position: fixed;
 	top: 0;
-	z-index: 100;
+	z-index: 2;
 	background-color: $header-background-color;
 
 	.bk-heading {
@@ -378,7 +378,7 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				background-color: #cacaca60;
+				background-color: $base-hover-color;
 				border-radius: 50px;
 				overflow: hidden;
 
@@ -416,6 +416,19 @@
 
 	&.bk-loading-md {
 		font-size: 7.5em;
+	}
+}
+
+.bk-action-button {
+	height: 2.5em;
+    width: 8em;
+    background-color: transparent;
+    border: 1px solid $focus-color;
+	border-radius: 5px;
+	
+	&:hover, &:active, &:focus {
+		background-color: $focus-color;
+		color: $header-background-color;
 	}
 }
 
